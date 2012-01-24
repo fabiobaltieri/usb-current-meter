@@ -8,20 +8,20 @@
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="yes" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="no"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="no"/>
-<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="no"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="no"/>
-<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="no"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="no"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="no"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="no"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="no"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="no"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="no"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="no"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="no"/>
+<layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="no"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="no" active="no"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="no"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="no"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="no"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="no"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="no" active="no"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="no" active="no"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="no" active="no"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="no" active="no"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="no"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="no"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="no"/>
@@ -30,8 +30,8 @@
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="no"/>
 <layer number="35" name="tGlue" color="7" fill="4" visible="no" active="no"/>
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="no"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="no"/>
-<layer number="38" name="bTest" color="7" fill="1" visible="yes" active="no"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="no"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="no"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="no"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="no"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="no"/>
@@ -39,16 +39,16 @@
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="no"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="no"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="no"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="no"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="no"/>
-<layer number="48" name="Document" color="7" fill="1" visible="yes" active="no"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="no"/>
-<layer number="50" name="dxf" color="7" fill="1" visible="yes" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="no"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="no"/>
-<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="yes" active="no"/>
-<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="yes" active="no"/>
-<layer number="56" name="wert" color="7" fill="1" visible="yes" active="no"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="no" active="no"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="no"/>
+<layer number="48" name="Document" color="7" fill="1" visible="no" active="no"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="no" active="no"/>
+<layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="no"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="no"/>
+<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
+<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
+<layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="93" name="Pins" color="2" fill="1" visible="no" active="yes"/>
@@ -8502,6 +8502,51 @@ Source: www.kingbright.com</description>
 <pin name="5" x="-2.54" y="-2.54" visible="pad" length="short" direction="pas" function="dot"/>
 <pin name="6" x="5.08" y="-2.54" visible="pad" length="short" direction="pas" function="dot" rot="R180"/>
 </symbol>
+<symbol name="CC_BY-SA">
+<wire x1="0" y1="6.35" x2="1.27" y2="7.62" width="0.254" layer="94" curve="-90"/>
+<wire x1="1.27" y1="7.62" x2="24.13" y2="7.62" width="0.254" layer="94"/>
+<wire x1="24.13" y1="7.62" x2="25.4" y2="6.35" width="0.254" layer="94" curve="-90"/>
+<wire x1="25.4" y1="6.35" x2="25.4" y2="2.54" width="0.254" layer="94"/>
+<wire x1="25.4" y1="2.54" x2="25.4" y2="1.27" width="0.254" layer="94"/>
+<wire x1="25.4" y1="1.27" x2="24.13" y2="0" width="0.254" layer="94" curve="-90"/>
+<wire x1="24.13" y1="0" x2="1.27" y2="0" width="0.254" layer="94"/>
+<wire x1="1.27" y1="0" x2="0" y2="1.27" width="0.254" layer="94" curve="-90"/>
+<wire x1="0" y1="1.27" x2="0" y2="2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="6.35" width="0.254" layer="94"/>
+<wire x1="25.4" y1="2.54" x2="8.255" y2="2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="1.905" y2="2.54" width="0.254" layer="94"/>
+<wire x1="8.255" y1="2.54" x2="1.905" y2="2.54" width="0.254" layer="94" curve="-136.397181"/>
+<wire x1="13.843" y1="6.35" x2="14.097" y2="6.35" width="0.254" layer="94"/>
+<wire x1="14.097" y1="6.35" x2="14.097" y2="6.096" width="0.254" layer="94"/>
+<wire x1="14.097" y1="6.096" x2="13.843" y2="6.096" width="0.254" layer="94"/>
+<wire x1="13.843" y1="6.096" x2="13.843" y2="6.35" width="0.254" layer="94"/>
+<wire x1="13.843" y1="5.715" x2="14.097" y2="5.715" width="0.254" layer="94"/>
+<wire x1="14.097" y1="5.715" x2="14.097" y2="3.937" width="0.254" layer="94"/>
+<wire x1="14.097" y1="3.937" x2="13.843" y2="3.937" width="0.254" layer="94"/>
+<wire x1="13.843" y1="3.937" x2="13.843" y2="5.715" width="0.254" layer="94"/>
+<wire x1="13.589" y1="5.715" x2="14.351" y2="5.715" width="0.254" layer="94"/>
+<wire x1="14.351" y1="5.715" x2="14.351" y2="4.699" width="0.254" layer="94"/>
+<wire x1="14.351" y1="4.699" x2="13.589" y2="4.699" width="0.254" layer="94"/>
+<wire x1="13.589" y1="4.699" x2="13.589" y2="5.715" width="0.254" layer="94"/>
+<wire x1="19.304" y1="5.588" x2="19.304" y2="4.572" width="0.254" layer="94" curve="-306.869898"/>
+<wire x1="19.05" y1="5.588" x2="19.558" y2="5.588" width="0.254" layer="94"/>
+<wire x1="19.558" y1="5.588" x2="19.304" y2="5.08" width="0.254" layer="94"/>
+<wire x1="19.304" y1="5.08" x2="19.05" y2="5.588" width="0.254" layer="94"/>
+<wire x1="19.05" y1="5.588" x2="19.304" y2="5.334" width="0.254" layer="94"/>
+<circle x="5.08" y="3.81" radius="2.8398" width="0.254" layer="94"/>
+<circle x="13.97" y="5.08" radius="1.796" width="0.254" layer="94"/>
+<circle x="20.32" y="5.08" radius="1.796" width="0.254" layer="94"/>
+<text x="3.048" y="2.54" size="2.54" layer="94">CC</text>
+<text x="12.7" y="0.508" size="1.6764" layer="94">BY</text>
+<text x="19.05" y="0.508" size="1.6764" layer="94">SA</text>
+</symbol>
+<symbol name="CC_BY-SA_TEXT">
+<text x="0" y="7.62" size="1.6764" layer="95">Released under the Creative Commons</text>
+<text x="0" y="2.54" size="1.3716" layer="95">http://creativecommons.org/licenses/by-sa/3.0</text>
+<text x="0" y="0" size="1.778" layer="95">Design by:</text>
+<text x="16.764" y="0" size="1.778" layer="96">&gt;VALUE</text>
+<text x="0" y="5.08" size="1.6764" layer="95">Attribution Share-Alike 3.0 License</text>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="ISP-AVR910" prefix="ISP" uservalue="yes">
@@ -8545,6 +8590,19 @@ Source: www.kingbright.com</description>
 <connect gate="A" pin="5" pad="5"/>
 <connect gate="A" pin="6" pad="6"/>
 </connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="CC_BY-SA" prefix="LICENSE" uservalue="yes">
+<gates>
+<gate name="G$1" symbol="CC_BY-SA" x="0" y="2.54"/>
+<gate name="G$2" symbol="CC_BY-SA_TEXT" x="0" y="-7.62"/>
+</gates>
+<devices>
+<device name="">
 <technologies>
 <technology name=""/>
 </technologies>
@@ -8648,6 +8706,7 @@ Source: www.kingbright.com</description>
 <variant name="bias" populate="no"/>
 </part>
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
+<part name="LICENSE1" library="balto" deviceset="CC_BY-SA" device="" value="Fabio Baltieri"/>
 </parts>
 <sheets>
 <sheet>
@@ -8801,6 +8860,8 @@ Source: www.kingbright.com</description>
 <instance part="GND17" gate="1" x="152.4" y="139.7"/>
 <instance part="C4" gate="G$1" x="198.12" y="93.98"/>
 <instance part="GND10" gate="1" x="198.12" y="83.82"/>
+<instance part="LICENSE1" gate="G$1" x="165.1" y="25.4"/>
+<instance part="LICENSE1" gate="G$2" x="193.04" y="25.4"/>
 </instances>
 <busses>
 </busses>

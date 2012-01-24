@@ -110,6 +110,10 @@
 <wire x1="2.8448" y1="16.1952" x2="0.4064" y2="13.7568" width="0" layer="20" curve="90"/>
 <wire x1="0.4064" y1="13.7568" x2="0.4064" y2="2.4384" width="0" layer="20"/>
 <wire x1="0.4064" y1="2.4384" x2="2.8448" y2="0" width="0" layer="20" curve="90"/>
+<text x="23.368" y="14.224" size="1.4224" layer="121">FB</text>
+<text x="23.368" y="12.8016" size="1.4224" layer="121">2012</text>
+<text x="15.8496" y="13.8176" size="2.54" layer="122">_</text>
+<text x="21.336" y="8.7376" size="2.54" layer="122">*</text>
 </plain>
 <libraries>
 <library name="SparkFun">
