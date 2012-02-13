@@ -8656,17 +8656,21 @@ Source: www.kingbright.com</description>
 </part>
 <part name="R5" library="rcl" deviceset="R-EU_" device="R0603" value="tbd">
 <variant name="bias" value="0"/>
+<variant name="rectifier" value="10k"/>
 </part>
 <part name="R6" library="rcl" deviceset="R-EU_" device="R0603" value="tbd">
 <variant name="bias" value="0"/>
+<variant name="rectifier" value="10k"/>
 </part>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
 <part name="P+6" library="supply1" deviceset="VCC" device=""/>
 <part name="R7" library="rcl" deviceset="R-EU_" device="R0603" value="tbd">
 <variant name="bias" populate="no"/>
+<variant name="rectifier" value="1k"/>
 </part>
 <part name="R8" library="rcl" deviceset="R-EU_" device="R0603" value="tbd">
 <variant name="bias" populate="no"/>
+<variant name="rectifier" value="6.8k"/>
 </part>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
@@ -8707,7 +8711,9 @@ Source: www.kingbright.com</description>
 </part>
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
 <part name="LICENSE1" library="balto" deviceset="CC_BY-SA" device="" value="Fabio Baltieri"/>
-<part name="C9" library="rcl" deviceset="C-EU" device="C0805" value="tbd"/>
+<part name="C9" library="rcl" deviceset="C-EU" device="C0805" value="tbd">
+<variant name="rectifier" value="0"/>
+</part>
 <part name="C10" library="rcl" deviceset="C-EU" device="C0805" value="1u"/>
 </parts>
 <sheets>
@@ -8734,9 +8740,9 @@ Source: www.kingbright.com</description>
 <wire x1="203.2" y1="134.62" x2="175.26" y2="134.62" width="0.1524" layer="97"/>
 <wire x1="175.26" y1="134.62" x2="175.26" y2="175.26" width="0.1524" layer="97"/>
 <wire x1="246.38" y1="116.84" x2="91.44" y2="116.84" width="0.1524" layer="97"/>
-<wire x1="91.44" y1="116.84" x2="91.44" y2="55.88" width="0.1524" layer="97"/>
-<wire x1="91.44" y1="55.88" x2="246.38" y2="55.88" width="0.1524" layer="97"/>
-<wire x1="246.38" y1="55.88" x2="246.38" y2="116.84" width="0.1524" layer="97"/>
+<wire x1="91.44" y1="116.84" x2="91.44" y2="58.42" width="0.1524" layer="97"/>
+<wire x1="91.44" y1="58.42" x2="246.38" y2="58.42" width="0.1524" layer="97"/>
+<wire x1="246.38" y1="58.42" x2="246.38" y2="116.84" width="0.1524" layer="97"/>
 <wire x1="45.72" y1="116.84" x2="81.28" y2="116.84" width="0.1524" layer="97"/>
 <wire x1="81.28" y1="116.84" x2="81.28" y2="68.58" width="0.1524" layer="97"/>
 <wire x1="81.28" y1="68.58" x2="45.72" y2="68.58" width="0.1524" layer="97"/>
@@ -8757,6 +8763,32 @@ Source: www.kingbright.com</description>
 <text x="99.06" y="68.58" size="1.778" layer="97">&gt; R5 at least 10 times R4</text>
 <text x="99.06" y="63.5" size="1.778" layer="97">&gt; gain = R8/R7 + 1</text>
 <text x="99.06" y="60.96" size="1.778" layer="97">&gt; output filter, T at least 1/5</text>
+<text x="93.98" y="43.18" size="1.778" layer="97">Pmax = 3300 * 1.2 ~= 4000 W</text>
+<text x="93.98" y="40.64" size="1.778" layer="97">Irms = 4000 W / 220 V = 18.2 A</text>
+<text x="93.98" y="38.1" size="1.778" layer="97">Ipk = 18.2 * sqrt(2) = 25.7 A</text>
+<text x="93.98" y="35.56" size="1.778" layer="97">Vpk = .333 / 20 * 25.7 = .428 V</text>
+<text x="93.98" y="48.26" size="1.778" layer="97">Vout = .333 V for I = 20 A</text>
+<text x="93.98" y="50.8" size="1.778" layer="97">Input coil: CTSA010-20</text>
+<text x="93.98" y="33.02" size="1.778" layer="97">Vavg = Vpk * 2 / pi = .273 V</text>
+<text x="93.98" y="27.94" size="1.778" layer="97">Gain = 6.8 / 1 + 1 = 7.8</text>
+<text x="93.98" y="25.4" size="1.778" layer="97">Vpk_post = Vpk * Gain = 3.34 V</text>
+<text x="93.98" y="22.86" size="1.778" layer="97">Vavg_post = Vavg * Gain = 2.13 V</text>
+<text x="165.1" y="53.34" size="1.778" layer="97">RMS for sine wave</text>
+<text x="165.1" y="48.26" size="1.778" layer="97">Vavg = Vpk * 2 / pi</text>
+<text x="165.1" y="45.72" size="1.778" layer="97">Vrms = Vpk / sqrt(2)</text>
+<wire x1="91.44" y1="55.88" x2="157.48" y2="55.88" width="0.1524" layer="97"/>
+<wire x1="157.48" y1="55.88" x2="157.48" y2="2.54" width="0.1524" layer="97"/>
+<wire x1="157.48" y1="2.54" x2="91.44" y2="2.54" width="0.1524" layer="97"/>
+<wire x1="91.44" y1="2.54" x2="91.44" y2="55.88" width="0.1524" layer="97"/>
+<wire x1="162.56" y1="55.88" x2="198.12" y2="55.88" width="0.1524" layer="97"/>
+<wire x1="198.12" y1="55.88" x2="198.12" y2="43.18" width="0.1524" layer="97"/>
+<wire x1="198.12" y1="43.18" x2="162.56" y2="43.18" width="0.1524" layer="97"/>
+<wire x1="162.56" y1="43.18" x2="162.56" y2="55.88" width="0.1524" layer="97"/>
+<text x="93.98" y="17.78" size="1.778" layer="97">Tfilter = 100k * 3u = .3 s = 3.33 Hz</text>
+<text x="93.98" y="12.7" size="1.778" layer="97">Vavg = .333 / 20 * (P / 220 * sqrt(2)) *</text>
+<text x="104.14" y="10.16" size="1.778" layer="97">* 2 / pi * 7.8</text>
+<text x="93.98" y="7.62" size="1.778" layer="97">P = Vavg / 7.8 * pi / 2 / sqrt(2) *</text>
+<text x="104.14" y="5.08" size="1.778" layer="97">* 20 / .333 * 220</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
