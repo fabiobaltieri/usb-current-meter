@@ -9,6 +9,15 @@
 
 #include "requests.h"
 
+static void reset_cpu(void)
+{
+	wdt_disable();
+
+	wdt_enable(WDTO_15MS);
+
+	for (;;);
+}
+
 usbMsgLen_t usbFunctionSetup(uint8_t data[8])
 {
 	usbRequest_t *rq = (void *)data;
@@ -32,6 +41,8 @@ usbMsgLen_t usbFunctionSetup(uint8_t data[8])
 		dataBuffer[0] = 0xca;
 		usbMsgPtr = dataBuffer;
 		return 1;
+	} else if (rq->bRequest == CUSTOM_RQ_RESET) {
+		reset_cpu();
 	}
 	return 0;
 }
