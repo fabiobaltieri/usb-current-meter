@@ -26,11 +26,11 @@ section at the end of this file).
 
 /* ---------------------------- Hardware Config ---------------------------- */
 
-#define USB_CFG_IOPORTNAME      D
+#define USB_CFG_IOPORTNAME      B
 /* This is the port where the USB bus is connected. When you configure it to
  * "B", the registers PORTB, PINB and DDRB will be used.
  */
-#define USB_CFG_DMINUS_BIT      4
+#define USB_CFG_DMINUS_BIT      1
 /* This is the bit number in USB_CFG_IOPORT where the USB D- line is connected.
  * This may be any bit in the port.
  */
@@ -163,7 +163,11 @@ section at the end of this file).
  * proceed, do a return after doing your things. One possible application
  * (besides debugging) is to flash a status LED on each packet.
  */
-/* #define USB_RESET_HOOK(resetStarts)     if(!resetStarts){hadUsbReset();} */
+#ifndef __ASSEMBLER__
+#include <avr/interrupt.h>  // for sei()
+extern void calibrateOscillator(void);
+#endif
+#define USB_RESET_HOOK(resetStarts)  if(!resetStarts){cli(); calibrateOscillator(); sei();}
 /* This macro is a hook if you need to know when an USB RESET occurs. It has
  * one parameter which distinguishes between the start of RESET state and its
  * end.
@@ -204,7 +208,7 @@ section at the end of this file).
  * usbFunctionWrite(). Use the global usbCurrentDataToken and a static variable
  * for each control- and out-endpoint to check for duplicate packets.
  */
-#define USB_CFG_HAVE_MEASURE_FRAME_LENGTH   0
+#define USB_CFG_HAVE_MEASURE_FRAME_LENGTH   1
 /* define this macro to 1 if you want the function usbMeasureFrameLength()
  * compiled in. This function can be used to calibrate the AVR's RC oscillator.
  */

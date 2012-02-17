@@ -23,8 +23,6 @@ usbMsgLen_t usbFunctionSetup(uint8_t data[8])
 	struct usbRequest *rq = (void *)data;
 	static uchar dataBuffer[4];
 
-	led_b_toggle();
-
 	if (rq->bRequest == CUSTOM_RQ_ECHO) {
 		dataBuffer[0] = rq->wValue.bytes[0];
 		dataBuffer[1] = rq->wValue.bytes[1];
@@ -53,7 +51,6 @@ int __attribute__((noreturn)) main(void)
 
 	led_init();
 	led_a_off();
-	led_b_off();
 
 	wdt_enable(WDTO_1S);
 

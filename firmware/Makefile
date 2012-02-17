@@ -11,8 +11,8 @@ BOOTLOADER = bootloadHID
 BOOTLOADER_FLAGS = -r main_text.hex
 
 # Options
-F_CPU = 12000000
-MCU = atmega168
+F_CPU = 16500000
+MCU = attiny85
 
 CFLAGS	= -Os -Wall -DF_CPU=$(F_CPU) -mmcu=$(MCU) -Iusbdrv -I.
 ASFLAGS	= -Os -Wall -DF_CPU=$(F_CPU) -mmcu=$(MCU) -Iusbdrv -I.
@@ -20,13 +20,13 @@ LDFLAGS	=
 
 AVRDUDEFLAGS = -cusbasp -Pusb -p$(MCU)
 
-LFUSE = 0xef
+LFUSE = 0xe1
 HFUSE = 0xdd
 
 #LOCK = -U lock:w:0x2f:m
 
 targets	= main.elf main_text.hex main_eeprom.hex
-objects	= main.o usbdrv/usbdrv.o usbdrv/usbdrvasm.o usbdrv/oddebug.o
+objects	= main.o osccal.o usbdrv/usbdrv.o usbdrv/usbdrvasm.o usbdrv/oddebug.o
 deps	= Makefile
 
 # Targets
