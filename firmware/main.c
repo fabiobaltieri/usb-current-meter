@@ -20,7 +20,7 @@ static void reset_cpu(void)
 
 usbMsgLen_t usbFunctionSetup(uint8_t data[8])
 {
-	usbRequest_t *rq = (void *)data;
+	struct usbRequest *rq = (void *)data;
 	static uchar dataBuffer[4];
 
 	led_b_toggle();
