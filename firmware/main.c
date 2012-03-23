@@ -8,6 +8,9 @@
 #include "usbdrv.h"
 
 #include "requests.h"
+#include "adc.h"
+
+uint32_t value;
 
 static void reset_cpu(void)
 {
@@ -21,28 +24,52 @@ static void reset_cpu(void)
 usbMsgLen_t usbFunctionSetup(uint8_t data[8])
 {
 	struct usbRequest *rq = (void *)data;
-	static uchar dataBuffer[4];
+	uint16_t offset;
+	uint8_t gain;
 
-	if (rq->bRequest == CUSTOM_RQ_ECHO) {
-		dataBuffer[0] = rq->wValue.bytes[0];
-		dataBuffer[1] = rq->wValue.bytes[1];
-		dataBuffer[2] = rq->wIndex.bytes[0];
-		dataBuffer[3] = rq->wIndex.bytes[1];
-		usbMsgPtr = dataBuffer;
-		return 4;
-	} else if (rq->bRequest == CUSTOM_RQ_SET_STATUS) {
-		if (rq->wValue.bytes[0] & 0x01)
-			led_a_on()
-		else
-			led_a_off()
-	} else if (rq->bRequest == CUSTOM_RQ_GET_STATUS) {
-		dataBuffer[0] = 0xca;
-		usbMsgPtr = dataBuffer;
-		return 1;
-	} else if (rq->bRequest == CUSTOM_RQ_RESET) {
+	if (rq->bRequest == CUSTOM_RQ_RESET)
 		reset_cpu();
+
+	if (rq->bRequest != CUSTOM_RQ_GET_VALUE)
+		return 0;
+
+	led_a_on();
+
+	adc_init();
+
+	offset = 0;
+	value  = adc_get(ADC_COIL);
+
+	if (value < AMP_TH) {
+		offset = adc_get(ADC_OFFSET_20X);
+		value  = adc_get(ADC_COIL_20X);
+		gain = 20;
+	} else {
+		gain = 1;
 	}
-	return 0;
+
+	adc_stop();
+
+	if (value > SATURATION_TH)
+		value = -1;
+	else if (value < offset)
+		value = 0;
+	else
+		value = 2560 * (value - offset) / 1024 / gain;
+
+	led_a_off();
+
+	usbMsgPtr = (uint8_t *)&value;
+	return 2;
+}
+
+void hello(void)
+{
+	uint8_t i;
+	for (i = 0; i < 8; i++) {
+		led_a_toggle();
+		_delay_ms(33);
+	}
 }
 
 int __attribute__((noreturn)) main(void)
@@ -53,6 +80,8 @@ int __attribute__((noreturn)) main(void)
 	led_a_off();
 
 	wdt_enable(WDTO_1S);
+
+	hello();
 
 	usbInit();
 	usbDeviceDisconnect();
