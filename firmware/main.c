@@ -10,7 +10,7 @@
 #include "requests.h"
 #include "adc.h"
 
-uint32_t value;
+uint16_t return_value;
 
 static void reset_cpu(void)
 {
@@ -21,17 +21,11 @@ static void reset_cpu(void)
 	for (;;);
 }
 
-usbMsgLen_t usbFunctionSetup(uint8_t data[8])
+static uint16_t get_power(void)
 {
-	struct usbRequest *rq = (void *)data;
+	uint32_t value;
 	uint16_t offset;
 	uint8_t gain;
-
-	if (rq->bRequest == CUSTOM_RQ_RESET)
-		reset_cpu();
-
-	if (rq->bRequest != CUSTOM_RQ_GET_VALUE)
-		return 0;
 
 	led_a_on();
 
@@ -59,8 +53,24 @@ usbMsgLen_t usbFunctionSetup(uint8_t data[8])
 
 	led_a_off();
 
-	usbMsgPtr = (uint8_t *)&value;
-	return 2;
+	return value;
+}
+
+usbMsgLen_t usbFunctionSetup(uint8_t data[8])
+{
+	struct usbRequest *rq = (void *)data;
+
+	switch (rq->bRequest) {
+	case CUSTOM_RQ_GET_VALUE:
+		return_value = get_power();
+		usbMsgPtr = (uint8_t *)&return_value;
+		return sizeof(return_value);
+	case CUSTOM_RQ_RESET:
+		reset_cpu();
+		return 0;
+	}
+
+	return 0;
 }
 
 void hello(void)
