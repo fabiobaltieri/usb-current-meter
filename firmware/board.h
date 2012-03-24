@@ -22,3 +22,5 @@
 
 #define AMP_TH 45 /* ~ 1024 / 20 */
 #define SATURATION_TH 1020
+#define ADC_VREF_mV 2560
+#define V_TO_W(x) (x * 4000 / 2130) /* from schematics */

@@ -49,7 +49,7 @@ static uint16_t get_power(void)
 	else if (value < offset)
 		value = 0;
 	else
-		value = 2560 * (value - offset) / 1024 / gain;
+		value = V_TO_W(ADC_VREF_mV * (value - offset) / 1024 / gain);
 
 	led_a_off();
 
