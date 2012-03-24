@@ -56,6 +56,17 @@ static uint16_t get_power(void)
 	return value;
 }
 
+static uint16_t get_raw(void)
+{
+	uint16_t value;
+
+	adc_init();
+	value  = adc_get(ADC_COIL);
+	adc_stop();
+
+	return value;
+}
+
 usbMsgLen_t usbFunctionSetup(uint8_t data[8])
 {
 	struct usbRequest *rq = (void *)data;
@@ -63,6 +74,10 @@ usbMsgLen_t usbFunctionSetup(uint8_t data[8])
 	switch (rq->bRequest) {
 	case CUSTOM_RQ_GET_VALUE:
 		return_value = get_power();
+		usbMsgPtr = (uint8_t *)&return_value;
+		return sizeof(return_value);
+	case CUSTOM_RQ_GET_RAW:
+		return_value = get_raw();
 		usbMsgPtr = (uint8_t *)&return_value;
 		return sizeof(return_value);
 	case CUSTOM_RQ_RESET:
