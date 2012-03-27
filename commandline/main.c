@@ -23,6 +23,9 @@ static int get_power(usb_dev_handle *handle)
 			      CUSTOM_RQ_GET_VALUE,
 			      0, 0, (char *)&data, sizeof(data), 1000);
 
+        if (ret < 0)
+                printf("usb_control_msg: %s\n", usb_strerror());
+
 	return data;
 }
 
