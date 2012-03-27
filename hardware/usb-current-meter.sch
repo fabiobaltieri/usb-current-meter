@@ -8789,6 +8789,18 @@ Source: www.kingbright.com</description>
 <text x="104.14" y="10.16" size="1.778" layer="97">* 2 / pi * 7.8</text>
 <text x="93.98" y="7.62" size="1.778" layer="97">P = Vavg / 7.8 * pi / 2 / sqrt(2) *</text>
 <text x="104.14" y="5.08" size="1.778" layer="97">* 20 / .333 * 220</text>
+<text x="35.56" y="25.4" size="1.778" layer="97">Pmax = 6500 W</text>
+<text x="35.56" y="22.86" size="1.778" layer="97">Irms = 6500 W / 220 V = 29.5 A</text>
+<text x="35.56" y="20.32" size="1.778" layer="97">Ipk = 29.5 * sqrt(2) = 41.8 A</text>
+<text x="35.56" y="17.78" size="1.778" layer="97">Vpk = .333 / 20 * 41.8 = .696 V</text>
+<text x="35.56" y="15.24" size="1.778" layer="97">Vavg = Vpk * 2 / pi = .443 V</text>
+<text x="35.56" y="10.16" size="1.778" layer="97">Gain = 3.9 / 1 + 1 = 4.9</text>
+<text x="35.56" y="7.62" size="1.778" layer="97">Vpk_post = Vpk * Gain = 3.41 V</text>
+<text x="35.56" y="5.08" size="1.778" layer="97">Vavg_post = Vavg * Gain = 2.17 V</text>
+<wire x1="33.02" y1="30.48" x2="88.9" y2="30.48" width="0.1524" layer="97"/>
+<wire x1="88.9" y1="30.48" x2="88.9" y2="2.54" width="0.1524" layer="97"/>
+<wire x1="88.9" y1="2.54" x2="33.02" y2="2.54" width="0.1524" layer="97"/>
+<wire x1="33.02" y1="2.54" x2="33.02" y2="30.48" width="0.1524" layer="97"/>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
