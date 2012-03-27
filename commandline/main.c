@@ -31,7 +31,7 @@ static int get_power(usb_dev_handle *handle)
 
 static void usage(char *name)
 {
-	fprintf(stderr, "syntax: %s [-h] [-r dbname] [-d delay]\n", name);
+	fprintf(stderr, "syntax: %s [-h] [-r dbname] [-d delay] divisor\n", name);
 	exit(1);
 }
 
@@ -41,6 +41,7 @@ int main(int argc, char **argv)
 	int opt;
 	char *rrdb = NULL;
 	int delay = 100;
+	int scale = 1;
 
 	usb_init();
 
@@ -60,6 +61,9 @@ int main(int argc, char **argv)
 		}
 	}
 
+	if (optind < argc)
+		scale = strtol(argv[optind++], NULL, 0);
+
 	if (usbOpenDevice(&handle, 0, NULL, 0, PRODUCT, NULL, NULL, NULL) != 0) {
 		fprintf(stderr, "error: could not find USB device \"%s\"\n", PRODUCT);
 		exit(1);
@@ -68,12 +72,12 @@ int main(int argc, char **argv)
 
 	if (rrdb) {
 		for (;;) {
-			printf("update %s N:%d\n", rrdb, get_power(handle));
+			printf("update %s N:%d\n", rrdb, get_power(handle) / scale);
 			fflush(stdout);
 			usleep(delay * 1000);
 		}
 	} else {
-		printf("%d\n", get_power(handle));
+		printf("%d\n", get_power(handle) / scale);
 	}
 
 	usb_close(handle);
