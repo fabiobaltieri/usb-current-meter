@@ -29,9 +29,25 @@ static int get_power(usb_dev_handle *handle)
 	return data;
 }
 
+static void send_reset(usb_dev_handle *handle)
+{
+	int ret;
+
+        ret = usb_control_msg(handle,
+			      USB_TYPE_VENDOR | USB_RECIP_DEVICE |
+			      USB_ENDPOINT_IN,
+			      CUSTOM_RQ_RESET,
+			      0, 0, NULL, 0, 1000);
+
+        if (ret < 0)
+                printf("usb_control_msg: %s\n", usb_strerror());
+}
+
 static void usage(char *name)
 {
-	fprintf(stderr, "syntax: %s [-h] [-r dbname] [-d delay] divisor\n", name);
+	fprintf(stderr, "syntax: %s -h\n", name);
+	fprintf(stderr, "        %s -R\n", name);
+	fprintf(stderr, "        %s [-r dbname] [-d delay] divisor\n", name);
 	exit(1);
 }
 
@@ -42,16 +58,20 @@ int main(int argc, char **argv)
 	char *rrdb = NULL;
 	int delay = 100;
 	int scale = 1;
+	int reset = 0;
 
 	usb_init();
 
-	while ((opt = getopt(argc, argv, "hr:d:")) != -1) {
+	while ((opt = getopt(argc, argv, "hRr:d:")) != -1) {
 		switch (opt) {
 		case 'h':
 			usage(argv[0]);
 			break;
 		case 'r':
 			rrdb = optarg;
+			break;
+		case 'R':
+			reset = 1;
 			break;
 		case 'd':
 			delay = strtol(optarg, NULL, 0);
@@ -69,6 +89,10 @@ int main(int argc, char **argv)
 		exit(1);
 	}
 
+	if (reset) {
+		send_reset(handle);
+		return 0;
+	}
 
 	if (rrdb) {
 		for (;;) {
