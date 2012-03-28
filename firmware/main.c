@@ -104,6 +104,8 @@ int __attribute__((noreturn)) main(void)
 	led_init();
 	led_a_off();
 
+	DIDR0 |= _BV(ADC2D) | _BV(ADC3D);
+
 	wdt_enable(WDTO_1S);
 
 	hello();
