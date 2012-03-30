@@ -8764,15 +8764,15 @@ Source: www.kingbright.com</description>
 <text x="99.06" y="63.5" size="1.778" layer="97">&gt; gain = R8/R7 + 1</text>
 <text x="99.06" y="60.96" size="1.778" layer="97">&gt; output filter, T at least 1/5</text>
 <text x="93.98" y="43.18" size="1.778" layer="97">Pmax = 3300 * 1.2 ~= 4000 W</text>
-<text x="93.98" y="40.64" size="1.778" layer="97">Irms = 4000 W / 220 V = 18.2 A</text>
-<text x="93.98" y="38.1" size="1.778" layer="97">Ipk = 18.2 * sqrt(2) = 25.7 A</text>
-<text x="93.98" y="35.56" size="1.778" layer="97">Vpk = .333 / 20 * 25.7 = .428 V</text>
+<text x="93.98" y="40.64" size="1.778" layer="97">Irms = Pmax / 230 = 17.4 A</text>
+<text x="93.98" y="38.1" size="1.778" layer="97">Ipk = Irms * sqrt(2) = 24.6 A</text>
+<text x="93.98" y="35.56" size="1.778" layer="97">Vpk = .333 / 20 * Ipk = .410 V</text>
 <text x="93.98" y="48.26" size="1.778" layer="97">Vout = .333 V for I = 20 A</text>
 <text x="93.98" y="50.8" size="1.778" layer="97">Input coil: CTSA010-20</text>
-<text x="93.98" y="33.02" size="1.778" layer="97">Vavg = Vpk * 2 / pi = .273 V</text>
+<text x="93.98" y="33.02" size="1.778" layer="97">Vavg = Vpk * 2 / pi = .261 V</text>
 <text x="93.98" y="27.94" size="1.778" layer="97">Gain = 6.8 / 1 + 1 = 7.8</text>
-<text x="93.98" y="25.4" size="1.778" layer="97">Vpk_post = Vpk * Gain = 3.34 V</text>
-<text x="93.98" y="22.86" size="1.778" layer="97">Vavg_post = Vavg * Gain = 2.13 V</text>
+<text x="93.98" y="25.4" size="1.778" layer="97">Vpk_post = Vpk * Gain = 3.19 V</text>
+<text x="93.98" y="22.86" size="1.778" layer="97">Vavg_post = Vavg * Gain = 2.034 V</text>
 <text x="165.1" y="53.34" size="1.778" layer="97">RMS for sine wave</text>
 <text x="165.1" y="48.26" size="1.778" layer="97">Vavg = Vpk * 2 / pi</text>
 <text x="165.1" y="45.72" size="1.778" layer="97">Vrms = Vpk / sqrt(2)</text>
@@ -8785,18 +8785,18 @@ Source: www.kingbright.com</description>
 <wire x1="198.12" y1="43.18" x2="162.56" y2="43.18" width="0.1524" layer="97"/>
 <wire x1="162.56" y1="43.18" x2="162.56" y2="55.88" width="0.1524" layer="97"/>
 <text x="93.98" y="17.78" size="1.778" layer="97">Tfilter = 100k * 3u = .3 s = 3.33 Hz</text>
-<text x="93.98" y="12.7" size="1.778" layer="97">Vavg = .333 / 20 * (P / 220 * sqrt(2)) *</text>
+<text x="93.98" y="12.7" size="1.778" layer="97">Vavg = .333 / 20 * (P / 230 * sqrt(2)) *</text>
 <text x="104.14" y="10.16" size="1.778" layer="97">* 2 / pi * 7.8</text>
 <text x="93.98" y="7.62" size="1.778" layer="97">P = Vavg / 7.8 * pi / 2 / sqrt(2) *</text>
-<text x="104.14" y="5.08" size="1.778" layer="97">* 20 / .333 * 220</text>
+<text x="104.14" y="5.08" size="1.778" layer="97">* 20 / .333 * 230</text>
 <text x="35.56" y="25.4" size="1.778" layer="97">Pmax = 6500 W</text>
-<text x="35.56" y="22.86" size="1.778" layer="97">Irms = 6500 W / 220 V = 29.5 A</text>
-<text x="35.56" y="20.32" size="1.778" layer="97">Ipk = 29.5 * sqrt(2) = 41.8 A</text>
-<text x="35.56" y="17.78" size="1.778" layer="97">Vpk = .333 / 20 * 41.8 = .696 V</text>
-<text x="35.56" y="15.24" size="1.778" layer="97">Vavg = Vpk * 2 / pi = .443 V</text>
+<text x="35.56" y="22.86" size="1.778" layer="97">Irms = Pmax / 230 = 28.2 A</text>
+<text x="35.56" y="20.32" size="1.778" layer="97">Ipk = Irms * sqrt(2) = 40.0 A</text>
+<text x="35.56" y="17.78" size="1.778" layer="97">Vpk = .333 / 20 * Ipk = .665 V</text>
+<text x="35.56" y="15.24" size="1.778" layer="97">Vavg = Vpk * 2 / pi = .424 V</text>
 <text x="35.56" y="10.16" size="1.778" layer="97">Gain = 3.9 / 1 + 1 = 4.9</text>
-<text x="35.56" y="7.62" size="1.778" layer="97">Vpk_post = Vpk * Gain = 3.41 V</text>
-<text x="35.56" y="5.08" size="1.778" layer="97">Vavg_post = Vavg * Gain = 2.17 V</text>
+<text x="35.56" y="7.62" size="1.778" layer="97">Vpk_post = Vpk * Gain = 3.26 V</text>
+<text x="35.56" y="5.08" size="1.778" layer="97">Vavg_post = Vavg * Gain = 2.076 V</text>
 <wire x1="33.02" y1="30.48" x2="88.9" y2="30.48" width="0.1524" layer="97"/>
 <wire x1="88.9" y1="30.48" x2="88.9" y2="2.54" width="0.1524" layer="97"/>
 <wire x1="88.9" y1="2.54" x2="33.02" y2="2.54" width="0.1524" layer="97"/>
