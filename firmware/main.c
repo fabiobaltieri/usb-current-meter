@@ -48,9 +48,7 @@ static uint16_t get_power(void)
 		gain = 1;
 	}
 
-	if (value > SATURATION_TH)
-		value = -1;
-	else if (value < offset)
+	if (value < offset)
 		value = 0;
 	else
 		value = V_TO_W(ADC_VREF_mV * (value - offset) / 1024 / gain);
