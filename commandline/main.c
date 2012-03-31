@@ -86,7 +86,7 @@ static void usage(char *name)
 	exit(1);
 }
 
-static void daemonize (void)
+static void daemonize(void)
 {
 	int i;
 	pid_t pid;
