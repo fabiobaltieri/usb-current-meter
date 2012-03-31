@@ -10,7 +10,15 @@
 #include "requests.h"
 #include "adc.h"
 
-uint16_t return_value;
+static uint16_t return_value;
+
+static enum mode {
+	M_NORMAL = 0,
+	M_AUTO   = 1,
+} mode;
+
+static uint32_t buffer_value;
+static uint16_t buffer_counter;
 
 static void reset_cpu(void)
 {
@@ -52,6 +60,64 @@ static uint16_t get_power(void)
 	return value;
 }
 
+static void buffer_poll(void)
+{
+	if (mode == M_AUTO && TIFR & _BV(OCIE0A)) {
+		if (buffer_counter < UINT16_MAX) {
+			buffer_value += get_power();
+			buffer_counter++;
+		} else {
+			buffer_value = get_power();
+			buffer_counter = 1;
+		}
+
+		TIFR |= _BV(OCIE0A);
+	}
+}
+
+static uint16_t get_buffer(void)
+{
+	uint16_t ret;
+
+	if (buffer_counter == 0)
+		return -1;
+
+	ret = buffer_value / buffer_counter;
+
+	buffer_value = 0;
+	buffer_counter = 0;
+
+	return ret;
+}
+
+static void change_mode(uint8_t automatic)
+{
+	if (automatic) {
+		mode = M_AUTO;
+
+		/* start with one valid value */
+		buffer_value = get_power();
+		buffer_counter = 1;
+
+		/* start timer */
+
+		OCR0A = 251; /* about 64 Hz at 16.5 / 1024 MHz */
+
+		TIFR |= _BV(OCIE0A);
+
+		TCCR0A = ( (1 << WGM01) | (0 << WGM00) );
+		TCCR0B = ( (0 << WGM02) |
+			   (1 << CS02) | (0 << CS01) | (1 << CS00) );
+	} else {
+		/* stop timer */
+
+		TCCR0B = 0x00;
+		TCCR0A = 0x00;
+
+		mode = M_NORMAL;
+	}
+}
+
 static uint16_t get_raw(void)
 {
 	uint16_t value;
@@ -67,13 +133,19 @@ usbMsgLen_t usbFunctionSetup(uint8_t data[8])
 
 	switch (rq->bRequest) {
 	case CUSTOM_RQ_GET_VALUE:
-		return_value = get_power();
+		if (mode == M_NORMAL)
+			return_value = get_power();
+		else
+			return_value = get_buffer();
 		usbMsgPtr = (uint8_t *)&return_value;
 		return sizeof(return_value);
 	case CUSTOM_RQ_GET_RAW:
 		return_value = get_raw();
 		usbMsgPtr = (uint8_t *)&return_value;
 		return sizeof(return_value);
+	case CUSTOM_RQ_SET_MODE:
+		change_mode(rq->wValue.bytes[0]);
+		return 0;
 	case CUSTOM_RQ_RESET:
 		reset_cpu();
 		return 0;
@@ -94,6 +166,8 @@ void hello(void)
 int __attribute__((noreturn)) main(void)
 {
 	uint8_t i;
+
+	mode = M_NORMAL;
 
 	led_init();
 	led_a_off();
@@ -120,5 +194,6 @@ int __attribute__((noreturn)) main(void)
 	for (;;) {
 		wdt_reset();
 		usbPoll();
+		buffer_poll();
 	}
 }
