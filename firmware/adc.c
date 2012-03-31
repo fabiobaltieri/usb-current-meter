@@ -27,6 +27,10 @@ void adc_init(void)
 		   (1 << ADPS2) | (1 << ADPS1) | (1 << ADPS0) );
 
 	/* 16.5Mhz / 128 = 129kHz */
+
+	/* turn on bandgap */
+	ADMUX = _BV(REFS2) | _BV(REFS1);
+	_delay_us(70);
 }
 
 void adc_stop(void)
