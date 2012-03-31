@@ -29,6 +29,7 @@ static void reset_cpu(void)
 	for (;;);
 }
 
+#define div_round(a, b) (((a) + (b/2)) / (b))
 static uint16_t get_power(void)
 {
 	uint32_t value;
@@ -51,7 +52,8 @@ static uint16_t get_power(void)
 	if (value < offset)
 		value = 0;
 	else
-		value = V_TO_W(ADC_VREF_mV * (value - offset) / 1024 / gain);
+		value = div_round((value - offset) * ADC_VREF_mV * CAL_POWER,
+				  ADC_VREF_BITS * CAL_VOLTAGE * (uint32_t)gain);
 
 	led_a_off();
 

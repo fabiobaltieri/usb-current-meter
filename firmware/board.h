@@ -21,7 +21,12 @@
 #define ADC_COIL_20X   (_BV(REFS2) | _BV(REFS1) | 0x07)
 
 #define AMP_TH 45 /* ~ 1024 / 20 */
-#define ADC_VREF_mV 2560
+#define ADC_VREF_mV (2560 / 512)
+#define ADC_VREF_BITS (1024 / 512)
 
-#define V_TO_W(x) (x * 4000 / 2034) /* 4000W version */
-//#define V_TO_W(x) (x * 6500 / 2076) /* 6500W version */
+/* 4000W version */
+#define CAL_POWER	4000
+#define CAL_VOLTAGE	2034
+/* 6500W version */
+//#define CAL_POWER	6500
+//#define CAL_VOLTAGE	2076
