@@ -67,9 +67,18 @@ static void send_reset(usb_dev_handle *handle)
 
 static void usage(char *name)
 {
-	fprintf(stderr, "syntax: %s -h\n", name);
-	fprintf(stderr, "        %s -R\n", name);
-	fprintf(stderr, "        %s [-r dbname] [-d delay] [-a] divisor\n", name);
+	fprintf(stderr, "Usage: %s -h\n", name);
+	fprintf(stderr, "       %s -R\n", name);
+	fprintf(stderr, "       %s [-r dbname] [-d delay] [-a] [-V voltage] divisor\n", name);
+	fprintf(stderr, "options:\n"
+			"  -h         this help\n"
+			"  -R         reset device\n"
+			"  -r dbname  rrdtool update mode on dbname db (use with | rrdtool -)\n"
+			"  -d delay   delay between updates\n"
+			"  -a         auto sample mode\n"
+			"  -V voltage scale output for real voltage instead of nominal\n"
+			"  divisor    power divisor, correspond to number of turns on the sensor\n"
+			);
 	exit(1);
 }
 
