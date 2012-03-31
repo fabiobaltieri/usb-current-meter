@@ -73,7 +73,7 @@ static void usage(char *name)
 	fprintf(stderr, "options:\n"
 			"  -h         this help\n"
 			"  -R         reset device\n"
-			"  -r dbname  rrdtool update mode on dbname db (use with | rrdtool -)\n"
+			"  -r dbname  rrdtool update mode on dbname db\n"
 			"  -d delay   delay between updates\n"
 			"  -a         auto sample mode\n"
 			"  -V voltage scale output for real voltage instead of nominal\n"
@@ -84,6 +84,7 @@ static void usage(char *name)
 
 int main(int argc, char **argv)
 {
+	FILE * output = stdout;
 	usb_dev_handle *handle = NULL;
 	int opt;
 	char *rrdb = NULL;
@@ -102,6 +103,11 @@ int main(int argc, char **argv)
 			break;
 		case 'r':
 			rrdb = optarg;
+			output = popen("rrdtool -", "w");
+			if (!output) {
+				perror("popen");
+				exit(1);
+			}
 			break;
 		case 'R':
 			reset = 1;
@@ -137,9 +143,9 @@ int main(int argc, char **argv)
 
 	if (rrdb) {
 		for (;;) {
-			printf("update %s N:%d\n", rrdb,
+			fprintf(output, "update %s N:%d\n", rrdb,
 					get_power(handle) * voltage / NOMINAL_VOLTAGE / scale);
-			fflush(stdout);
+			fflush(output);
 			usleep(delay * 1000);
 		}
 	} else {
