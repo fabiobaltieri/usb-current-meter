@@ -178,9 +178,6 @@ int main(int argc, char **argv)
 	if (change_mode)
 		set_mode(handle, mode);
 
-	if (background)
-		daemonize();
-
 	if (rrdb) {
 		if (background)
 			output = popen("rrdtool - > /dev/null 2>&1", "w");
@@ -190,6 +187,9 @@ int main(int argc, char **argv)
 			perror("popen");
 			exit(1);
 		}
+
+		if (background)
+			daemonize();
 
 		for (;;) {
 			fprintf(output, "update %s N:%d\n", rrdb,
