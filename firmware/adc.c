@@ -23,7 +23,7 @@ void adc_init(void)
 		   (0 << ADSC)  | /* start conversion */
 		   (0 << ADATE) | /* free running     */
 		   (1 << ADIF)  | /* clear interrupts */
-		   (1 << ADIE)  | /* interrupt enable */
+		   (0 << ADIE)  | /* interrupt enable */
 		   (1 << ADPS2) | (1 << ADPS1) | (1 << ADPS0) );
 
 	/* 16.5Mhz / 128 = 129kHz */
@@ -32,11 +32,6 @@ void adc_init(void)
 void adc_stop(void)
 {
 	ADCSRA = 0x00; /* ADC disable */
-}
-
-ISR(ADC_vect)
-{
-	/* empty */
 }
 
 uint16_t adc_get (uint8_t cfg)
