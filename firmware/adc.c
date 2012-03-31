@@ -43,12 +43,10 @@ uint16_t adc_get (uint8_t cfg)
 {
 	ADMUX = cfg;
 
-	/* wait Vref to stabilize */
-	_delay_ms(5);
+	/* wait signals to stabilize */
+	_delay_us(10);
 
-	set_sleep_mode(SLEEP_MODE_ADC);
-
-	sleep_mode();
+	ADCSRA |= _BV(ADSC);
 
 	loop_until_bit_is_clear(ADCSRA, ADSC);
 

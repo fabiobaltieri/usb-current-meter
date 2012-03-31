@@ -29,8 +29,6 @@ static uint16_t get_power(void)
 
 	led_a_on();
 
-	adc_init();
-
 	offset = 0;
 	value  = adc_get(ADC_COIL);
 
@@ -41,8 +39,6 @@ static uint16_t get_power(void)
 	} else {
 		gain = 1;
 	}
-
-	adc_stop();
 
 	if (value > SATURATION_TH)
 		value = -1;
@@ -60,9 +56,7 @@ static uint16_t get_raw(void)
 {
 	uint16_t value;
 
-	adc_init();
 	value  = adc_get(ADC_COIL);
-	adc_stop();
 
 	return value;
 }
@@ -104,6 +98,7 @@ int __attribute__((noreturn)) main(void)
 	led_init();
 	led_a_off();
 
+	adc_init();
 	DIDR0 |= _BV(ADC2D) | _BV(ADC3D);
 
 	wdt_enable(WDTO_1S);
