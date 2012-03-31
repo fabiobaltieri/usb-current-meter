@@ -76,9 +76,9 @@ static void usage(char *name)
 	fprintf(stderr, "options:\n"
 			"  -h         this help\n"
 			"  -R         reset device\n"
-			"  -a         auto sample mode\n"
 			"  -b         run in background\n"
 			"  -d delay   delay between updates\n"
+			"  -m         set mode (0=normal, 1=auto sampling)\n"
 			"  -r dbname  rrdtool update mode on dbname db\n"
 			"  -V voltage scale output for real voltage instead of nominal\n"
 			"  divisor    power divisor, correspond to number of turns on the sensor\n"
@@ -126,13 +126,14 @@ int main(int argc, char **argv)
 	int delay = 100;
 	int scale = 1;
 	int reset = 0;
+	int change_mode = 0;
 	int mode = 0;
 	int voltage = 230;
 	int background = 0;
 
 	usb_init();
 
-	while ((opt = getopt(argc, argv, "bhRr:d:aV:")) != -1) {
+	while ((opt = getopt(argc, argv, "bhRr:d:m:V:")) != -1) {
 		switch (opt) {
 		case 'h':
 			usage(argv[0]);
@@ -143,8 +144,9 @@ int main(int argc, char **argv)
 		case 'R':
 			reset = 1;
 			break;
-		case 'a':
-			mode = 1;
+		case 'm':
+			change_mode = 1;
+			mode = strtol(optarg, NULL, 0);
 			break;
 		case 'b':
 			background = 1;
@@ -173,7 +175,8 @@ int main(int argc, char **argv)
 		return 0;
 	}
 
-	set_mode(handle, mode);
+	if (change_mode)
+		set_mode(handle, mode);
 
 	if (background)
 		daemonize();
