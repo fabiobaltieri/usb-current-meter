@@ -12,6 +12,8 @@
 
 #define PRODUCT "usb-current-meter"
 
+#define NOMINAL_VOLTAGE 230
+
 static int get_power(usb_dev_handle *handle)
 {
 	int ret;
@@ -80,10 +82,11 @@ int main(int argc, char **argv)
 	int scale = 1;
 	int reset = 0;
 	int mode = 0;
+	int voltage = 230;
 
 	usb_init();
 
-	while ((opt = getopt(argc, argv, "hRr:d:a")) != -1) {
+	while ((opt = getopt(argc, argv, "hRr:d:aV:")) != -1) {
 		switch (opt) {
 		case 'h':
 			usage(argv[0]);
@@ -99,6 +102,9 @@ int main(int argc, char **argv)
 			break;
 		case 'd':
 			delay = strtol(optarg, NULL, 0);
+			break;
+		case 'V':
+			voltage = strtol(optarg, NULL, 0);
 			break;
 		default:
 			usage(argv[0]);
@@ -122,12 +128,13 @@ int main(int argc, char **argv)
 
 	if (rrdb) {
 		for (;;) {
-			printf("update %s N:%d\n", rrdb, get_power(handle) / scale);
+			printf("update %s N:%d\n", rrdb,
+					get_power(handle) * voltage / NOMINAL_VOLTAGE / scale);
 			fflush(stdout);
 			usleep(delay * 1000);
 		}
 	} else {
-		printf("%d\n", get_power(handle) / scale);
+		printf("%d\n", get_power(handle) * voltage / NOMINAL_VOLTAGE / scale);
 	}
 
 	usb_close(handle);
