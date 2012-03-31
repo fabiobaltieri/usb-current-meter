@@ -17,37 +17,57 @@ static int get_power(usb_dev_handle *handle)
 	int ret;
 	uint16_t data;
 
-        ret = usb_control_msg(handle,
+	ret = usb_control_msg(handle,
 			      USB_TYPE_VENDOR | USB_RECIP_DEVICE |
 			      USB_ENDPOINT_IN,
 			      CUSTOM_RQ_GET_VALUE,
 			      0, 0, (char *)&data, sizeof(data), 1000);
 
-        if (ret < 0)
-                printf("usb_control_msg: %s\n", usb_strerror());
+	if (ret < 0) {
+		printf("usb_control_msg: %s\n", usb_strerror());
+		exit(1);
+	}
 
 	return data;
+}
+
+static void set_mode(usb_dev_handle *handle, int mode)
+{
+	int ret;
+
+	ret = usb_control_msg(handle,
+			      USB_TYPE_VENDOR | USB_RECIP_DEVICE |
+			      USB_ENDPOINT_IN,
+			      CUSTOM_RQ_SET_MODE,
+			      mode, 0, NULL, 0, 1000);
+
+	if (ret < 0) {
+		printf("usb_control_msg: %s\n", usb_strerror());
+		exit(1);
+	}
 }
 
 static void send_reset(usb_dev_handle *handle)
 {
 	int ret;
 
-        ret = usb_control_msg(handle,
+	ret = usb_control_msg(handle,
 			      USB_TYPE_VENDOR | USB_RECIP_DEVICE |
 			      USB_ENDPOINT_IN,
 			      CUSTOM_RQ_RESET,
 			      0, 0, NULL, 0, 1000);
 
-        if (ret < 0)
-                printf("usb_control_msg: %s\n", usb_strerror());
+	if (ret < 0) {
+		printf("usb_control_msg: %s\n", usb_strerror());
+		exit(1);
+	}
 }
 
 static void usage(char *name)
 {
 	fprintf(stderr, "syntax: %s -h\n", name);
 	fprintf(stderr, "        %s -R\n", name);
-	fprintf(stderr, "        %s [-r dbname] [-d delay] divisor\n", name);
+	fprintf(stderr, "        %s [-r dbname] [-d delay] [-a] divisor\n", name);
 	exit(1);
 }
 
@@ -59,10 +79,11 @@ int main(int argc, char **argv)
 	int delay = 100;
 	int scale = 1;
 	int reset = 0;
+	int mode = 0;
 
 	usb_init();
 
-	while ((opt = getopt(argc, argv, "hRr:d:")) != -1) {
+	while ((opt = getopt(argc, argv, "hRr:d:a")) != -1) {
 		switch (opt) {
 		case 'h':
 			usage(argv[0]);
@@ -72,6 +93,9 @@ int main(int argc, char **argv)
 			break;
 		case 'R':
 			reset = 1;
+			break;
+		case 'a':
+			mode = 1;
 			break;
 		case 'd':
 			delay = strtol(optarg, NULL, 0);
@@ -93,6 +117,8 @@ int main(int argc, char **argv)
 		send_reset(handle);
 		return 0;
 	}
+
+	set_mode(handle, mode);
 
 	if (rrdb) {
 		for (;;) {
