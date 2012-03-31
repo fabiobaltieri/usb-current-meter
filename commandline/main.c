@@ -6,6 +6,7 @@
 #include <fcntl.h>
 #include <sys/stat.h>
 #include <sys/types.h>
+#include <endian.h>
 
 #include <usb.h>
 
@@ -32,6 +33,8 @@ static int get_power(usb_dev_handle *handle)
 		printf("usb_control_msg: %s\n", usb_strerror());
 		exit(1);
 	}
+
+	data = le16toh(data);
 
 	return data;
 }
