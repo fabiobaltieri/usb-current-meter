@@ -29,7 +29,7 @@ static void reset_cpu(void)
 	for (;;);
 }
 
-#define div_round(a, b) (((a) + (b/2)) / (b))
+#define div_round(a, b) (((a) + ((b)/2)) / (b))
 static uint16_t get_power(void)
 {
 	uint32_t value;
