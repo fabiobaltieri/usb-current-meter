@@ -1,0 +1,15 @@
+#!/bin/sh
+
+DB=power.rrd
+
+# 5 minutes points, 96 hours data
+# 30 minutes points, 25 days data
+# 2 hours points, 2 months data
+# 24 hours points, 2 years data
+
+rrdtool create $DB \
+  DS:power:GAUGE:600:U:U  \
+  RRA:AVERAGE:0.5:1:1152  \
+  RRA:AVERAGE:0.5:6:720   \
+  RRA:AVERAGE:0.5:24:720  \
+  RRA:AVERAGE:0.5:288:730

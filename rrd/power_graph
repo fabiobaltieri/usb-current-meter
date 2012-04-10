@@ -1,0 +1,10 @@
+#!/bin/sh
+
+DB=power.rrd
+RRDTOOL=rrdtool
+OUT=$( pwd )
+OPTS="-w 700 -h 200"
+
+$RRDTOOL graph $OUT/power.png $OPTS -l 0 --start -5d \
+  DEF:power=$DB:power:AVERAGE \
+  LINE1:power#0000ff:power
