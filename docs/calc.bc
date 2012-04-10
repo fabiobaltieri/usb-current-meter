@@ -1,0 +1,31 @@
+scale = 10
+
+rh = 120
+rl = 2200
+rx = 3300
+
+voltage = 230
+pmax = 6500
+irms = pmax / voltage
+ipk = irms * sqrt(2)
+vpk = .333 / 20 * ipk
+vavg = vpk * 2 / 3.1415
+
+print "V = ", voltage, "\n"
+print "Pmax = ", pmax, "\n"
+print "Vpk = ", vpk, "\n"
+print "Vavg = ", vavg, "\n"
+print "\n"
+
+g1 = 1 + rx / rh 
+g2 = 1 + rx / (rh + rl)
+print "g1 = ", g1, " g2 = ", g2, " rap = ", g1 / g2, "\n"
+
+vpk1 = vpk * g1
+vavg1 = vavg * g1
+vpk2 = vpk * g2
+vavg2 = vavg * g2
+print "vpk1 = ", vpk1, " vavg1 = ", vavg1, "\n"
+print "vpk2 = ", vpk2, " vavg2 = ", vavg2, "\n"
+
+quit
