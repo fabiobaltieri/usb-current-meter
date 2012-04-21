@@ -8670,7 +8670,7 @@ Source: www.kingbright.com</description>
 </part>
 <part name="R8" library="rcl" deviceset="R-EU_" device="R0603" value="tbd">
 <variant name="bias" populate="no"/>
-<variant name="rectifier" value="6.8k"/>
+<variant name="rectifier" value="3.3k"/>
 </part>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
@@ -8770,9 +8770,9 @@ Source: www.kingbright.com</description>
 <text x="93.98" y="48.26" size="1.778" layer="97">Vout = .333 V for I = 20 A</text>
 <text x="93.98" y="50.8" size="1.778" layer="97">Input coil: CTSA010-20</text>
 <text x="93.98" y="33.02" size="1.778" layer="97">Vavg = Vpk * 2 / pi = .261 V</text>
-<text x="93.98" y="27.94" size="1.778" layer="97">Gain = 6.8 / 1 + 1 = 7.8</text>
-<text x="93.98" y="25.4" size="1.778" layer="97">Vpk_post = Vpk * Gain = 3.19 V</text>
-<text x="93.98" y="22.86" size="1.778" layer="97">Vavg_post = Vavg * Gain = 2.034 V</text>
+<text x="93.98" y="27.94" size="1.778" layer="97">Gain = 3.3 / 1 + 1 = 4.3</text>
+<text x="93.98" y="25.4" size="1.778" layer="97">Vpk_post = Vpk * Gain = 1.76 V</text>
+<text x="93.98" y="22.86" size="1.778" layer="97">Vavg_post = Vavg * Gain = 1.121 V</text>
 <text x="165.1" y="53.34" size="1.778" layer="97">RMS for sine wave</text>
 <text x="165.1" y="48.26" size="1.778" layer="97">Vavg = Vpk * 2 / pi</text>
 <text x="165.1" y="45.72" size="1.778" layer="97">Vrms = Vpk / sqrt(2)</text>
@@ -8794,9 +8794,9 @@ Source: www.kingbright.com</description>
 <text x="35.56" y="20.32" size="1.778" layer="97">Ipk = Irms * sqrt(2) = 40.0 A</text>
 <text x="35.56" y="17.78" size="1.778" layer="97">Vpk = .333 / 20 * Ipk = .665 V</text>
 <text x="35.56" y="15.24" size="1.778" layer="97">Vavg = Vpk * 2 / pi = .424 V</text>
-<text x="35.56" y="10.16" size="1.778" layer="97">Gain = 3.9 / 1 + 1 = 4.9</text>
-<text x="35.56" y="7.62" size="1.778" layer="97">Vpk_post = Vpk * Gain = 3.26 V</text>
-<text x="35.56" y="5.08" size="1.778" layer="97">Vavg_post = Vavg * Gain = 2.076 V</text>
+<text x="35.56" y="10.16" size="1.778" layer="97">Gain = 1.5 / 1 + 1 = 2.5</text>
+<text x="35.56" y="7.62" size="1.778" layer="97">Vpk_post = Vpk * Gain = 1.664 V</text>
+<text x="35.56" y="5.08" size="1.778" layer="97">Vavg_post = Vavg * Gain = 1.060 V</text>
 <wire x1="33.02" y1="30.48" x2="88.9" y2="30.48" width="0.1524" layer="97"/>
 <wire x1="88.9" y1="30.48" x2="88.9" y2="2.54" width="0.1524" layer="97"/>
 <wire x1="88.9" y1="2.54" x2="33.02" y2="2.54" width="0.1524" layer="97"/>

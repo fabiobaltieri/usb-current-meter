@@ -1658,7 +1658,7 @@ design rules under a new name.</description>
 </element>
 <element name="R8" library="rcl" package="R0603" value="tbd" x="20.9296" y="11.7856" rot="R90">
 <variant name="bias" populate="no"/>
-<variant name="rectifier" value="6.8k"/>
+<variant name="rectifier" value="3.3k"/>
 </element>
 <element name="R10" library="rcl" package="R0603" value="tbd" x="21.5392" y="8.128" rot="MR0">
 <variant name="rectifier" populate="no"/>
@@ -1987,10 +1987,6 @@ design rules under a new name.</description>
 <wire x1="22.7584" y1="14.7676" x2="22.6924" y2="14.8336" width="0.6096" layer="1"/>
 </signal>
 </signals>
-<errors>
-<approved hash="5,16,eebb3232e5a4fccd"/>
-<approved hash="5,16,e65432a2e434cbe2"/>
-</errors>
 </board>
 </drawing>
 </eagle>
