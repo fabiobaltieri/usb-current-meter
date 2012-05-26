@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="8" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="16" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -134,6 +134,20 @@
 <wire x1="76.8096" y1="20.9296" x2="85.7504" y2="20.9296" width="0.4064" layer="121" style="shortdash"/>
 <wire x1="85.7504" y1="20.9296" x2="85.7504" y2="31.2928" width="0.4064" layer="121" style="shortdash"/>
 <wire x1="85.7504" y1="31.2928" x2="76.8096" y2="31.2928" width="0.4064" layer="121" style="shortdash"/>
+<text x="9.9568" y="6.5024" size="1.778" layer="121" rot="R90">FB2012</text>
+<text x="7.5184" y="6.5024" size="1.778" layer="121" rot="R90">usb-current-meter-8x</text>
+<text x="65.8368" y="12.3952" size="3.81" layer="121">_</text>
+<text x="89.8144" y="20.1168" size="1.4224" layer="121" rot="R90">+3V3</text>
+<text x="26.0096" y="18.288" size="0.8128" layer="121" font="fixed" ratio="20" align="center">P N   + +   - -</text>
+<text x="42.672" y="2.4384" size="3.81" layer="121">_</text>
+<text x="10.16" y="43.8912" size="1.6764" layer="122" font="fixed" rot="MR270">zero</text>
+<text x="19.9136" y="43.8912" size="1.6764" layer="122" font="fixed" rot="MR270">uno</text>
+<text x="29.6672" y="43.8912" size="1.6764" layer="122" font="fixed" rot="MR270">due</text>
+<text x="39.4208" y="43.8912" size="1.6764" layer="122" font="fixed" rot="MR270">tre</text>
+<text x="49.1744" y="43.8912" size="1.6764" layer="122" font="fixed" rot="MR270">quattro</text>
+<text x="58.928" y="43.8912" size="1.6764" layer="122" font="fixed" rot="MR270">cinque</text>
+<text x="68.6816" y="43.8912" size="1.6764" layer="122" font="fixed" rot="MR270">sei</text>
+<text x="78.4352" y="43.4848" size="1.6764" layer="122" font="fixed" rot="MR270">sette</text>
 </plain>
 <libraries>
 <library name="SparkFun">
