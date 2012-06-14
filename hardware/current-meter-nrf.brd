@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="8" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.2032" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -102,8 +102,8 @@
 </layers>
 <board>
 <plain>
-<hole x="13.4112" y="1.6256" drill="0.8"/>
-<hole x="15.4432" y="1.6256" drill="0.8"/>
+<hole x="13.4112" y="1.8288" drill="1.2"/>
+<hole x="15.4432" y="1.8288" drill="1.2"/>
 <text x="13.8176" y="22.352" size="1.4224" layer="121">FB2012</text>
 <text x="23.5712" y="22.352" size="1.016" layer="121">current-meter-nrf</text>
 <rectangle x1="11.9888" y1="9.9568" x2="13.6144" y2="11.5824" layer="29"/>
@@ -1503,12 +1503,12 @@ We've spent an enormous amount of time creating and checking these footprints an
 <text x="-0.381" y="-0.508" size="0.0254" layer="27">&gt;VALUE</text>
 <text x="0" y="-1.905" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
 </package>
-<package name="TP11R">
+<package name="TP12R">
 <description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
-<smd name="TP" x="0" y="0" dx="1.1" dy="1.1" layer="1" roundness="100" cream="no"/>
-<text x="-0.5499" y="0.5999" size="1.27" layer="25">&gt;NAME</text>
-<text x="-0.508" y="-0.508" size="0.0254" layer="27">&gt;VALUE</text>
-<text x="0" y="-1.905" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
+<smd name="TP" x="0" y="0" dx="1.2" dy="1.2" layer="1" roundness="100" cream="no"/>
+<text x="-0.5999" y="0.65" size="1.27" layer="25">&gt;NAME</text>
+<text x="-0.508" y="-0.635" size="0.0254" layer="27">&gt;VALUE</text>
+<text x="0" y="-2.54" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
 </package>
 </packages>
 </library>
@@ -1943,10 +1943,10 @@ design rules under a new name.</description>
 </element>
 <element name="U$1" library="antenna" package="DN007+5" value="INVERTED_F_ANTENNA+5" x="9.9568" y="25.1968"/>
 <element name="IC3" library="maxim" package="SOT23-5L" value="MAX1555" x="27.432" y="3.048"/>
-<element name="TP1" library="testpad" package="TP11R" value="TPTP11R" x="17.272" y="1.6256" rot="MR0">
+<element name="TP1" library="testpad" package="TP12R" value="TPTP12R" x="17.272" y="1.6256" rot="MR0">
 <attribute name="TP_SIGNAL_NAME" value="" x="0.762" y="-54.2544" size="1.778" layer="28" rot="MR0" display="off"/>
 </element>
-<element name="TP2" library="testpad" package="TP11R" value="TPTP11R" x="11.5824" y="1.6256" rot="MR0">
+<element name="TP2" library="testpad" package="TP12R" value="TPTP12R" x="11.5824" y="1.6256" rot="MR0">
 <attribute name="TP_SIGNAL_NAME" value="" x="-10.0076" y="-54.2544" size="1.778" layer="28" rot="MR0" display="off"/>
 </element>
 <element name="U3" library="SparkFun" package="USB-MINIB" value="USB-MINIB-5PIN" x="38.608" y="6.096" rot="R180"/>
@@ -2435,8 +2435,10 @@ design rules under a new name.</description>
 <wire x1="10.9728" y1="7.112" x2="10.3632" y2="7.112" width="0.2032" layer="1"/>
 <wire x1="10.3632" y1="7.112" x2="9.5504" y2="6.2992" width="0.2032" layer="1"/>
 <via x="9.5504" y="6.2992" extent="1-16" drill="0.508"/>
-<wire x1="22.5552" y1="2.6416" x2="13.0048" y2="2.6416" width="0.2032" layer="16"/>
-<wire x1="13.0048" y1="2.6416" x2="9.5504" y2="6.096" width="0.2032" layer="16"/>
+<wire x1="22.5552" y1="2.6416" x2="19.5072" y2="2.6416" width="0.2032" layer="16"/>
+<wire x1="19.5072" y1="2.6416" x2="19.1008" y2="3.048" width="0.2032" layer="16"/>
+<wire x1="19.1008" y1="3.048" x2="12.5984" y2="3.048" width="0.2032" layer="16"/>
+<wire x1="12.5984" y1="3.048" x2="9.5504" y2="6.096" width="0.2032" layer="16"/>
 <wire x1="9.5504" y1="6.096" x2="9.5504" y2="6.2992" width="0.2032" layer="16"/>
 </signal>
 <signal name="RF_CSN">
@@ -2452,8 +2454,10 @@ design rules under a new name.</description>
 <wire x1="12.3016" y1="7.8312" x2="10.7696" y2="6.2992" width="0.2032" layer="1"/>
 <via x="10.7696" y="6.2992" extent="1-16" drill="0.508"/>
 <wire x1="10.7696" y1="6.2992" x2="10.7696" y2="5.4864" width="0.2032" layer="16"/>
-<wire x1="10.7696" y1="5.4864" x2="13.208" y2="3.048" width="0.2032" layer="16"/>
-<wire x1="13.208" y1="3.048" x2="22.352" y2="3.048" width="0.2032" layer="16"/>
+<wire x1="10.7696" y1="5.4864" x2="12.8016" y2="3.4544" width="0.2032" layer="16"/>
+<wire x1="12.8016" y1="3.4544" x2="19.304" y2="3.4544" width="0.2032" layer="16"/>
+<wire x1="19.304" y1="3.4544" x2="19.7104" y2="3.048" width="0.2032" layer="16"/>
+<wire x1="19.7104" y1="3.048" x2="22.352" y2="3.048" width="0.2032" layer="16"/>
 </signal>
 <signal name="RF_IRQ">
 <contactref element="U2" pad="6"/>
@@ -2512,11 +2516,11 @@ design rules under a new name.</description>
 </signals>
 <errors>
 <approved hash="5,1,f906ddc26f79afd6"/>
-<approved hash="5,1,fc308c5ebd02e3d9"/>
 <approved hash="5,1,d912984c606ce937"/>
+<approved hash="5,1,fc308c5ebd02e3d9"/>
 <approved hash="5,1,be765473c7e2c221"/>
-<approved hash="19,1,7d24bb7c5d0f059c"/>
 <approved hash="19,1,f076e33748540aa2"/>
+<approved hash="19,1,7d24bb7c5d0f059c"/>
 <approved hash="19,1,ae9e12fc7b68f575"/>
 <approved hash="5,1,60a914facd0dc6ae"/>
 <approved hash="5,1,8fe4ec8da419b5ad"/>
@@ -2531,8 +2535,8 @@ design rules under a new name.</description>
 <approved hash="5,1,d8f2d6038d45241d"/>
 <approved hash="5,1,41ab4294b2aa7594"/>
 <approved hash="5,16,67dec4a5dd238843"/>
-<approved hash="5,16,8f0d22228554d39b"/>
 <approved hash="5,16,9622215285a4c7b4"/>
+<approved hash="5,16,8f0d22228554d39b"/>
 </errors>
 </board>
 </drawing>
