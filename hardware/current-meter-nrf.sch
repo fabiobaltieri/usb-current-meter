@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.1">
+<eagle version="6.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -10711,10 +10711,13 @@ http://www.hammondmfg.com/pdf/1591XXA.pdf&lt;br&gt;</description>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
 <part name="P+4" library="supply1" deviceset="VCC" device=""/>
 <part name="BOX1" library="hammond" deviceset="HAMMOND-BOX" device="-G-1H"/>
-<part name="R10" library="rcl" deviceset="R-EU_" device="R0603" value="330"/>
-<part name="LED2" library="led" deviceset="LED" device="SML0805"/>
-<part name="P+6" library="supply1" deviceset="VCC" device=""/>
 <part name="FRAME2" library="frames" deviceset="DINA4_L" device=""/>
+<part name="C1" library="rcl" deviceset="C-EU" device="C0805" value="1u"/>
+<part name="P+3" library="supply1" deviceset="VCC" device=""/>
+<part name="GND3" library="supply1" deviceset="GND" device=""/>
+<part name="C2" library="rcl" deviceset="C-EU" device="C0805" value="1u"/>
+<part name="P+6" library="supply1" deviceset="+5V" device=""/>
+<part name="GND4" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -10731,9 +10734,9 @@ http://www.hammondmfg.com/pdf/1591XXA.pdf&lt;br&gt;</description>
 <wire x1="53.34" y1="111.76" x2="53.34" y2="71.12" width="0.1524" layer="97"/>
 <wire x1="53.34" y1="71.12" x2="2.54" y2="71.12" width="0.1524" layer="97"/>
 <wire x1="2.54" y1="71.12" x2="2.54" y2="111.76" width="0.1524" layer="97"/>
-<wire x1="58.42" y1="111.76" x2="88.9" y2="111.76" width="0.1524" layer="97"/>
-<wire x1="88.9" y1="111.76" x2="88.9" y2="71.12" width="0.1524" layer="97"/>
-<wire x1="88.9" y1="71.12" x2="58.42" y2="71.12" width="0.1524" layer="97"/>
+<wire x1="58.42" y1="111.76" x2="91.44" y2="111.76" width="0.1524" layer="97"/>
+<wire x1="91.44" y1="111.76" x2="91.44" y2="71.12" width="0.1524" layer="97"/>
+<wire x1="91.44" y1="71.12" x2="58.42" y2="71.12" width="0.1524" layer="97"/>
 <wire x1="58.42" y1="71.12" x2="58.42" y2="111.76" width="0.1524" layer="97"/>
 <wire x1="157.48" y1="60.96" x2="2.54" y2="60.96" width="0.1524" layer="97"/>
 <wire x1="2.54" y1="60.96" x2="2.54" y2="2.54" width="0.1524" layer="97"/>
@@ -10779,10 +10782,10 @@ http://www.hammondmfg.com/pdf/1591XXA.pdf&lt;br&gt;</description>
 <wire x1="116.84" y1="99.06" x2="116.84" y2="177.8" width="0.1524" layer="97"/>
 <wire x1="116.84" y1="177.8" x2="261.62" y2="177.8" width="0.1524" layer="97"/>
 <text x="119.38" y="170.18" size="5.08" layer="97">nRF</text>
-<wire x1="111.76" y1="177.8" x2="111.76" y2="124.46" width="0.1524" layer="97"/>
-<wire x1="111.76" y1="124.46" x2="35.56" y2="124.46" width="0.1524" layer="97"/>
-<wire x1="35.56" y1="177.8" x2="111.76" y2="177.8" width="0.1524" layer="97"/>
-<text x="38.1" y="170.18" size="5.08" layer="97">Charger</text>
+<wire x1="106.68" y1="177.8" x2="106.68" y2="124.46" width="0.1524" layer="97"/>
+<wire x1="106.68" y1="124.46" x2="35.56" y2="124.46" width="0.1524" layer="97"/>
+<wire x1="35.56" y1="177.8" x2="106.68" y2="177.8" width="0.1524" layer="97"/>
+<text x="45.72" y="170.18" size="5.08" layer="97">Charger</text>
 <wire x1="35.56" y1="177.8" x2="35.56" y2="124.46" width="0.1524" layer="97"/>
 <text x="119.38" y="162.56" size="5.08" layer="97">Radio</text>
 </plain>
@@ -10839,12 +10842,12 @@ http://www.hammondmfg.com/pdf/1591XXA.pdf&lt;br&gt;</description>
 <instance part="GND13" gate="1" x="139.7" y="25.4"/>
 <instance part="C8" gate="G$1" x="15.24" y="33.02"/>
 <instance part="GND14" gate="1" x="15.24" y="22.86"/>
-<instance part="LED1" gate="G$1" x="71.12" y="93.98" rot="MR270"/>
-<instance part="R13" gate="G$1" x="78.74" y="86.36" smashed="yes" rot="R90">
-<attribute name="NAME" x="81.28" y="88.9" size="1.778" layer="95" rot="MR180"/>
-<attribute name="VALUE" x="81.28" y="83.82" size="1.778" layer="96"/>
+<instance part="LED1" gate="G$1" x="81.28" y="86.36" rot="MR0"/>
+<instance part="R13" gate="G$1" x="73.66" y="91.44" smashed="yes" rot="R180">
+<attribute name="NAME" x="71.12" y="96.52" size="1.778" layer="95"/>
+<attribute name="VALUE" x="71.12" y="93.98" size="1.778" layer="96"/>
 </instance>
-<instance part="GND15" gate="1" x="78.74" y="76.2"/>
+<instance part="GND15" gate="1" x="81.28" y="76.2"/>
 <instance part="ISP1" gate="A" x="27.94" y="88.9"/>
 <instance part="P+9" gate="VCC" x="43.18" y="99.06"/>
 <instance part="GND16" gate="1" x="43.18" y="78.74"/>
@@ -10933,34 +10936,42 @@ http://www.hammondmfg.com/pdf/1591XXA.pdf&lt;br&gt;</description>
 </instance>
 <instance part="U$1" gate="G$1" x="243.84" y="160.02"/>
 <instance part="GND29" gate="1" x="233.68" y="147.32"/>
-<instance part="IC3" gate="G$1" x="58.42" y="147.32"/>
-<instance part="GND27" gate="1" x="71.12" y="134.62"/>
-<instance part="TP1" gate="G$1" x="76.2" y="152.4" smashed="yes" rot="R270">
-<attribute name="NAME" x="82.55" y="153.67" size="1.778" layer="95" rot="R180"/>
-<attribute name="TP_SIGNAL_NAME" x="74.93" y="151.13" size="1.778" layer="97" rot="R270"/>
+<instance part="IC3" gate="G$1" x="66.04" y="147.32"/>
+<instance part="GND27" gate="1" x="78.74" y="134.62"/>
+<instance part="TP1" gate="G$1" x="83.82" y="152.4" smashed="yes" rot="R270">
+<attribute name="NAME" x="90.17" y="153.67" size="1.778" layer="95" rot="R180"/>
+<attribute name="TP_SIGNAL_NAME" x="82.55" y="151.13" size="1.778" layer="97" rot="R270"/>
 </instance>
-<instance part="TP2" gate="G$1" x="76.2" y="142.24" smashed="yes" rot="R270">
-<attribute name="NAME" x="82.55" y="143.51" size="1.778" layer="95" rot="R180"/>
-<attribute name="TP_SIGNAL_NAME" x="74.93" y="140.97" size="1.778" layer="97" rot="R270"/>
+<instance part="TP2" gate="G$1" x="83.82" y="142.24" smashed="yes" rot="R270">
+<attribute name="NAME" x="90.17" y="143.51" size="1.778" layer="95" rot="R180"/>
+<attribute name="TP_SIGNAL_NAME" x="82.55" y="140.97" size="1.778" layer="97" rot="R270"/>
 </instance>
 <instance part="U3" gate="G$1" x="17.78" y="144.78" rot="MR0"/>
 <instance part="GND17" gate="1" x="12.7" y="129.54"/>
 <instance part="U$2" gate="G$1" x="241.3" y="134.62" rot="MR0"/>
-<instance part="P+2" gate="1" x="43.18" y="157.48" smashed="yes">
-<attribute name="VALUE" x="40.64" y="154.94" size="1.778" layer="96" rot="R90"/>
+<instance part="P+2" gate="1" x="50.8" y="157.48" smashed="yes">
+<attribute name="VALUE" x="48.26" y="154.94" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="IC1" gate="1" x="185.42" y="63.5"/>
 <instance part="GND2" gate="1" x="238.76" y="43.18"/>
-<instance part="P+4" gate="VCC" x="71.12" y="160.02"/>
+<instance part="P+4" gate="VCC" x="78.74" y="160.02"/>
 <instance part="BOX1" gate="G$1" x="127" y="83.82"/>
-<instance part="R10" gate="G$1" x="101.6" y="142.24" smashed="yes" rot="MR90">
-<attribute name="NAME" x="99.06" y="144.78" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="99.06" y="139.7" size="1.778" layer="96" rot="MR0"/>
-</instance>
-<instance part="LED2" gate="G$1" x="101.6" y="154.94" rot="MR0"/>
-<instance part="P+6" gate="VCC" x="101.6" y="162.56"/>
 <instance part="FRAME2" gate="G$1" x="0" y="0"/>
 <instance part="FRAME2" gate="G$2" x="162.56" y="0"/>
+<instance part="C1" gate="G$1" x="96.52" y="149.86" smashed="yes">
+<attribute name="NAME" x="99.06" y="149.86" size="1.778" layer="95" rot="MR180"/>
+<attribute name="VALUE" x="99.06" y="144.78" size="1.778" layer="96"/>
+</instance>
+<instance part="P+3" gate="VCC" x="96.52" y="157.48"/>
+<instance part="GND3" gate="1" x="96.52" y="139.7"/>
+<instance part="C2" gate="G$1" x="40.64" y="149.86" smashed="yes">
+<attribute name="NAME" x="43.18" y="149.86" size="1.778" layer="95" rot="MR180"/>
+<attribute name="VALUE" x="43.18" y="144.78" size="1.778" layer="96"/>
+</instance>
+<instance part="P+6" gate="1" x="40.64" y="157.48" smashed="yes">
+<attribute name="VALUE" x="38.1" y="154.94" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="GND4" gate="1" x="40.64" y="139.7"/>
 </instances>
 <busses>
 </busses>
@@ -11005,11 +11016,6 @@ http://www.hammondmfg.com/pdf/1591XXA.pdf&lt;br&gt;</description>
 <pinref part="GND14" gate="1" pin="GND"/>
 <pinref part="C8" gate="G$1" pin="2"/>
 <wire x1="15.24" y1="25.4" x2="15.24" y2="27.94" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="R13" gate="G$1" pin="1"/>
-<pinref part="GND15" gate="1" pin="GND"/>
-<wire x1="78.74" y1="81.28" x2="78.74" y2="78.74" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="ISP1" gate="A" pin="6"/>
@@ -11100,10 +11106,10 @@ http://www.hammondmfg.com/pdf/1591XXA.pdf&lt;br&gt;</description>
 <pinref part="GND29" gate="1" pin="GND"/>
 </segment>
 <segment>
-<wire x1="68.58" y1="142.24" x2="71.12" y2="142.24" width="0.1524" layer="91"/>
-<wire x1="71.12" y1="142.24" x2="71.12" y2="137.16" width="0.1524" layer="91"/>
-<wire x1="71.12" y1="142.24" x2="73.66" y2="142.24" width="0.1524" layer="91"/>
-<junction x="71.12" y="142.24"/>
+<wire x1="76.2" y1="142.24" x2="78.74" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="142.24" x2="78.74" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="142.24" x2="81.28" y2="142.24" width="0.1524" layer="91"/>
+<junction x="78.74" y="142.24"/>
 <pinref part="IC3" gate="G$1" pin="GND"/>
 <pinref part="GND27" gate="1" pin="GND"/>
 <pinref part="TP2" gate="G$1" pin="TP"/>
@@ -11156,6 +11162,21 @@ http://www.hammondmfg.com/pdf/1591XXA.pdf&lt;br&gt;</description>
 <wire x1="236.22" y1="48.26" x2="238.76" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="238.76" y1="48.26" x2="238.76" y2="45.72" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="LED1" gate="G$1" pin="C"/>
+<pinref part="GND15" gate="1" pin="GND"/>
+<wire x1="81.28" y1="81.28" x2="81.28" y2="78.74" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="C1" gate="G$1" pin="2"/>
+<pinref part="GND3" gate="1" pin="GND"/>
+<wire x1="96.52" y1="144.78" x2="96.52" y2="142.24" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GND4" gate="1" pin="GND"/>
+<pinref part="C2" gate="G$1" pin="2"/>
+<wire x1="40.64" y1="142.24" x2="40.64" y2="144.78" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="+5V" class="0">
 <segment>
@@ -11167,8 +11188,13 @@ http://www.hammondmfg.com/pdf/1591XXA.pdf&lt;br&gt;</description>
 <segment>
 <pinref part="IC3" gate="G$1" pin="DC"/>
 <pinref part="P+2" gate="1" pin="+5V"/>
-<wire x1="48.26" y1="149.86" x2="43.18" y2="149.86" width="0.1524" layer="91"/>
-<wire x1="43.18" y1="149.86" x2="43.18" y2="154.94" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="149.86" x2="50.8" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="50.8" y1="149.86" x2="50.8" y2="154.94" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="C2" gate="G$1" pin="1"/>
+<pinref part="P+6" gate="1" pin="+5V"/>
+<wire x1="40.64" y1="152.4" x2="40.64" y2="154.94" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VCC" class="0">
@@ -11212,18 +11238,18 @@ http://www.hammondmfg.com/pdf/1591XXA.pdf&lt;br&gt;</description>
 <pinref part="P+10" gate="VCC" pin="VCC"/>
 </segment>
 <segment>
-<wire x1="68.58" y1="152.4" x2="71.12" y2="152.4" width="0.1524" layer="91"/>
-<wire x1="71.12" y1="152.4" x2="71.12" y2="157.48" width="0.1524" layer="91"/>
-<wire x1="71.12" y1="152.4" x2="73.66" y2="152.4" width="0.1524" layer="91"/>
-<junction x="71.12" y="152.4"/>
+<wire x1="76.2" y1="152.4" x2="78.74" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="152.4" x2="78.74" y2="157.48" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="152.4" x2="81.28" y2="152.4" width="0.1524" layer="91"/>
+<junction x="78.74" y="152.4"/>
 <pinref part="IC3" gate="G$1" pin="BAT"/>
 <pinref part="TP1" gate="G$1" pin="TP"/>
 <pinref part="P+4" gate="VCC" pin="VCC"/>
 </segment>
 <segment>
-<pinref part="LED2" gate="G$1" pin="A"/>
-<pinref part="P+6" gate="VCC" pin="VCC"/>
-<wire x1="101.6" y1="160.02" x2="101.6" y2="157.48" width="0.1524" layer="91"/>
+<pinref part="C1" gate="G$1" pin="1"/>
+<pinref part="P+3" gate="VCC" pin="VCC"/>
+<wire x1="96.52" y1="152.4" x2="96.52" y2="154.94" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$7" class="0">
@@ -11314,14 +11340,6 @@ http://www.hammondmfg.com/pdf/1591XXA.pdf&lt;br&gt;</description>
 <wire x1="236.22" y1="50.8" x2="254" y2="50.8" width="0.1524" layer="91"/>
 <label x="254" y="50.8" size="1.778" layer="95" rot="MR0"/>
 <pinref part="IC1" gate="1" pin="(PCINT1/AIN0/ADC1)PA1"/>
-</segment>
-</net>
-<net name="N$3" class="0">
-<segment>
-<pinref part="LED1" gate="G$1" pin="C"/>
-<pinref part="R13" gate="G$1" pin="2"/>
-<wire x1="76.2" y1="93.98" x2="78.74" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="78.74" y1="93.98" x2="78.74" y2="91.44" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="RESET" class="0">
@@ -11530,22 +11548,23 @@ http://www.hammondmfg.com/pdf/1591XXA.pdf&lt;br&gt;</description>
 <wire x1="132.08" y1="142.24" x2="121.92" y2="142.24" width="0.1524" layer="91"/>
 <label x="121.92" y="142.24" size="1.778" layer="95"/>
 <pinref part="U2" gate="G$1" pin="IRQ"/>
-<wire x1="254" y1="66.04" x2="236.22" y2="66.04" width="0.1524" layer="91"/>
-<label x="254" y="66.04" size="1.778" layer="95" rot="MR0"/>
-<pinref part="IC1" gate="1" pin="(PCINT7/ICP/OC0B/ADC7)PA7"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="1" pin="(PCINT10/INT0/OC0A/CKOUT)PB2"/>
+<wire x1="236.22" y1="76.2" x2="254" y2="76.2" width="0.1524" layer="91"/>
+<label x="254" y="76.2" size="1.778" layer="95" rot="MR0"/>
 </segment>
 </net>
 <net name="CHG" class="0">
 <segment>
-<wire x1="68.58" y1="147.32" x2="76.2" y2="147.32" width="0.1524" layer="91"/>
-<label x="76.2" y="147.32" size="1.778" layer="95" rot="MR0"/>
+<wire x1="76.2" y1="147.32" x2="83.82" y2="147.32" width="0.1524" layer="91"/>
+<label x="83.82" y="147.32" size="1.778" layer="95" rot="MR0"/>
 <pinref part="IC3" gate="G$1" pin="!CHG"/>
 </segment>
 <segment>
-<pinref part="R10" gate="G$1" pin="1"/>
-<wire x1="101.6" y1="137.16" x2="101.6" y2="134.62" width="0.1524" layer="91"/>
-<wire x1="101.6" y1="134.62" x2="93.98" y2="134.62" width="0.1524" layer="91"/>
-<label x="93.98" y="134.62" size="1.778" layer="95"/>
+<pinref part="IC1" gate="1" pin="(PCINT7/ICP/OC0B/ADC7)PA7"/>
+<wire x1="236.22" y1="66.04" x2="254" y2="66.04" width="0.1524" layer="91"/>
+<label x="254" y="66.04" size="1.778" layer="95" rot="MR0"/>
 </segment>
 </net>
 <net name="A_EN" class="0">
@@ -11567,45 +11586,46 @@ http://www.hammondmfg.com/pdf/1591XXA.pdf&lt;br&gt;</description>
 <pinref part="IC1" gate="1" pin="(PCINT9/XTAL2)PB1"/>
 </segment>
 </net>
-<net name="N$20" class="0">
-<segment>
-<pinref part="R10" gate="G$1" pin="2"/>
-<pinref part="LED2" gate="G$1" pin="C"/>
-<wire x1="101.6" y1="147.32" x2="101.6" y2="149.86" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="LED" class="0">
-<segment>
-<pinref part="LED1" gate="G$1" pin="A"/>
-<wire x1="68.58" y1="93.98" x2="60.96" y2="93.98" width="0.1524" layer="91"/>
-<label x="60.96" y="93.98" size="1.778" layer="95"/>
-</segment>
 <segment>
 <wire x1="236.22" y1="71.12" x2="254" y2="71.12" width="0.1524" layer="91"/>
 <label x="254" y="71.12" size="1.778" layer="95" rot="MR0"/>
 <pinref part="IC1" gate="1" pin="(PCINT8/XTAL1/CLKI)PB0"/>
+</segment>
+<segment>
+<pinref part="R13" gate="G$1" pin="2"/>
+<wire x1="68.58" y1="91.44" x2="60.96" y2="91.44" width="0.1524" layer="91"/>
+<label x="60.96" y="91.44" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="N$3" class="0">
+<segment>
+<pinref part="R13" gate="G$1" pin="1"/>
+<pinref part="LED1" gate="G$1" pin="A"/>
+<wire x1="78.74" y1="91.44" x2="81.28" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="91.44" x2="81.28" y2="88.9" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
 </sheet>
 </sheets>
 <errors>
-<approved hash="104,1,68.58,114.3,IC2A,V+,A_EN,,,"/>
-<approved hash="104,1,68.58,99.06,IC2A,V-,GND,,,"/>
-<approved hash="104,1,266.7,246.38,U2,VDD,VCC,,,"/>
-<approved hash="104,1,256.54,210.82,U2,VSS,GND,,,"/>
-<approved hash="104,1,264.16,210.82,U2,VSS,GND,,,"/>
-<approved hash="104,1,269.24,210.82,U2,DVDD,N$15,,,"/>
-<approved hash="104,1,287.02,228.6,U2,VDD_PA,N$14,,,"/>
-<approved hash="104,1,264.16,246.38,U2,VDD,VCC,,,"/>
-<approved hash="104,1,261.62,246.38,U2,VDD,VCC,,,"/>
-<approved hash="104,1,261.62,210.82,U2,VSS,GND,,,"/>
-<approved hash="104,1,259.08,210.82,U2,VSS,GND,,,"/>
-<approved hash="104,1,254,210.82,U2,VSS,GND,,,"/>
-<approved hash="202,1,27.94,167.64,IC3,USB,,,,"/>
-<approved hash="115,1,87.63,177.478,LED1,,,,,"/>
-<approved hash="115,1,135.452,174.121,ISP1,,,,,"/>
-<approved hash="115,1,194.206,131.976,FRAME1,,,,,"/>
+<approved hash="104,1,68.58,53.34,IC2A,V+,A_EN,,,"/>
+<approved hash="104,1,68.58,38.1,IC2A,V-,GND,,,"/>
+<approved hash="104,1,157.48,165.1,U2,VDD,VCC,,,"/>
+<approved hash="104,1,147.32,129.54,U2,VSS,GND,,,"/>
+<approved hash="104,1,154.94,129.54,U2,VSS,GND,,,"/>
+<approved hash="104,1,160.02,129.54,U2,DVDD,N$15,,,"/>
+<approved hash="104,1,177.8,147.32,U2,VDD_PA,N$14,,,"/>
+<approved hash="104,1,154.94,165.1,U2,VDD,VCC,,,"/>
+<approved hash="104,1,152.4,165.1,U2,VDD,VCC,,,"/>
+<approved hash="104,1,152.4,129.54,U2,VSS,GND,,,"/>
+<approved hash="104,1,149.86,129.54,U2,VSS,GND,,,"/>
+<approved hash="104,1,144.78,129.54,U2,VSS,GND,,,"/>
+<approved hash="202,1,55.88,144.78,IC3,USB,,,,"/>
+<approved hash="115,1,80.9583,85.09,LED1,,,,,"/>
+<approved hash="115,1,28.7716,90.3012,ISP1,,,,,"/>
+<approved hash="115,1,131.976,90.066,FRAME2,,,,,"/>
 </errors>
 </schematic>
 </drawing>
