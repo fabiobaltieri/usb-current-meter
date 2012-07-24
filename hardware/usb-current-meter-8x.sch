@@ -9656,7 +9656,7 @@ http://www.hammondmfg.com/pdf/1591XXA.pdf&lt;br&gt;</description>
 <part name="GND16" library="supply1" deviceset="GND" device=""/>
 <part name="U$1" library="SparkFun" deviceset="USB-MINIB" device="-5PIN"/>
 <part name="GND11" library="supply1" deviceset="GND" device=""/>
-<part name="Y1" library="SparkFun" deviceset="CRYSTAL" device="HC49UV"/>
+<part name="Y1" library="SparkFun" deviceset="CRYSTAL" device="HC49UV" value="12Mhz"/>
 <part name="P+10" library="supply1" deviceset="VCC" device=""/>
 <part name="C9" library="rcl" deviceset="C-EU" device="C0805" value=".1u"/>
 <part name="GND18" library="supply1" deviceset="GND" device=""/>
@@ -9667,9 +9667,9 @@ http://www.hammondmfg.com/pdf/1591XXA.pdf&lt;br&gt;</description>
 <part name="GND21" library="supply1" deviceset="GND" device=""/>
 <part name="C12" library="rcl" deviceset="C-EU" device="C0805" value=".1u"/>
 <part name="C13" library="rcl" deviceset="C-EU" device="C0805" value=".1u"/>
-<part name="IC3" library="avr-5" deviceset="MEGA48/88/168" device="-AU"/>
+<part name="IC3" library="avr-5" deviceset="MEGA48/88/168" device="-AU" value="ATmega168P-20AU"/>
 <part name="FRAME1" library="frames" deviceset="DINA3_L" device=""/>
-<part name="IC9" library="burr-brown" deviceset="OPA2234" device="U"/>
+<part name="IC9" library="burr-brown" deviceset="OPA2234" device="U" value="LM358"/>
 <part name="X7" library="con-phoenix-381_l" deviceset="MC2" device=""/>
 <part name="D7" library="diode" deviceset="BAT54" device=""/>
 <part name="R53" library="rcl" deviceset="R-EU_" device="R0805" value="Rload"/>
@@ -9700,7 +9700,7 @@ http://www.hammondmfg.com/pdf/1591XXA.pdf&lt;br&gt;</description>
 <part name="JP1" library="SparkFun-Connectors" deviceset="M04" device="PTH"/>
 <part name="P+6" library="supply1" deviceset="VCC" device=""/>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
-<part name="IC2" library="burr-brown" deviceset="OPA2234" device="U"/>
+<part name="IC2" library="burr-brown" deviceset="OPA2234" device="U" value="LM358"/>
 <part name="X1" library="con-phoenix-381_l" deviceset="MC2" device=""/>
 <part name="D1" library="diode" deviceset="BAT54" device=""/>
 <part name="R5" library="rcl" deviceset="R-EU_" device="R0805" value="Rload"/>
@@ -9726,7 +9726,7 @@ http://www.hammondmfg.com/pdf/1591XXA.pdf&lt;br&gt;</description>
 <part name="C15" library="rcl" deviceset="C-EU" device="C0805" value="100n"/>
 <part name="R11" library="rcl" deviceset="R-EU_" device="R0603" value="Rh"/>
 <part name="C16" library="rcl" deviceset="C-EU" device="C0805" value="0"/>
-<part name="IC4" library="burr-brown" deviceset="OPA2234" device="U"/>
+<part name="IC4" library="burr-brown" deviceset="OPA2234" device="U" value="LM358"/>
 <part name="X2" library="con-phoenix-381_l" deviceset="MC2" device=""/>
 <part name="D2" library="diode" deviceset="BAT54" device=""/>
 <part name="R12" library="rcl" deviceset="R-EU_" device="R0805" value="Rload"/>
@@ -9752,7 +9752,7 @@ http://www.hammondmfg.com/pdf/1591XXA.pdf&lt;br&gt;</description>
 <part name="C21" library="rcl" deviceset="C-EU" device="C0805" value="100n"/>
 <part name="R19" library="rcl" deviceset="R-EU_" device="R0603" value="Rh"/>
 <part name="C22" library="rcl" deviceset="C-EU" device="C0805" value="0"/>
-<part name="IC5" library="burr-brown" deviceset="OPA2234" device="U"/>
+<part name="IC5" library="burr-brown" deviceset="OPA2234" device="U" value="LM358"/>
 <part name="X3" library="con-phoenix-381_l" deviceset="MC2" device=""/>
 <part name="D3" library="diode" deviceset="BAT54" device=""/>
 <part name="R20" library="rcl" deviceset="R-EU_" device="R0805" value="Rload"/>
@@ -9778,7 +9778,7 @@ http://www.hammondmfg.com/pdf/1591XXA.pdf&lt;br&gt;</description>
 <part name="C27" library="rcl" deviceset="C-EU" device="C0805" value="100n"/>
 <part name="R26" library="rcl" deviceset="R-EU_" device="R0603" value="Rh"/>
 <part name="C28" library="rcl" deviceset="C-EU" device="C0805" value="0"/>
-<part name="IC6" library="burr-brown" deviceset="OPA2234" device="U"/>
+<part name="IC6" library="burr-brown" deviceset="OPA2234" device="U" value="LM358"/>
 <part name="X4" library="con-phoenix-381_l" deviceset="MC2" device=""/>
 <part name="D4" library="diode" deviceset="BAT54" device=""/>
 <part name="R27" library="rcl" deviceset="R-EU_" device="R0805" value="Rload"/>
@@ -9804,7 +9804,7 @@ http://www.hammondmfg.com/pdf/1591XXA.pdf&lt;br&gt;</description>
 <part name="C33" library="rcl" deviceset="C-EU" device="C0805" value="100n"/>
 <part name="R33" library="rcl" deviceset="R-EU_" device="R0603" value="Rh"/>
 <part name="C34" library="rcl" deviceset="C-EU" device="C0805" value="0"/>
-<part name="IC7" library="burr-brown" deviceset="OPA2234" device="U"/>
+<part name="IC7" library="burr-brown" deviceset="OPA2234" device="U" value="LM358"/>
 <part name="X5" library="con-phoenix-381_l" deviceset="MC2" device=""/>
 <part name="D5" library="diode" deviceset="BAT54" device=""/>
 <part name="R34" library="rcl" deviceset="R-EU_" device="R0805" value="Rload"/>
@@ -9830,7 +9830,7 @@ http://www.hammondmfg.com/pdf/1591XXA.pdf&lt;br&gt;</description>
 <part name="C39" library="rcl" deviceset="C-EU" device="C0805" value="100n"/>
 <part name="R40" library="rcl" deviceset="R-EU_" device="R0603" value="Rh"/>
 <part name="C44" library="rcl" deviceset="C-EU" device="C0805" value="0"/>
-<part name="IC8" library="burr-brown" deviceset="OPA2234" device="U"/>
+<part name="IC8" library="burr-brown" deviceset="OPA2234" device="U" value="LM358"/>
 <part name="X6" library="con-phoenix-381_l" deviceset="MC2" device=""/>
 <part name="D6" library="diode" deviceset="BAT54" device=""/>
 <part name="R41" library="rcl" deviceset="R-EU_" device="R0805" value="Rload"/>
@@ -9856,7 +9856,7 @@ http://www.hammondmfg.com/pdf/1591XXA.pdf&lt;br&gt;</description>
 <part name="C49" library="rcl" deviceset="C-EU" device="C0805" value="100n"/>
 <part name="R47" library="rcl" deviceset="R-EU_" device="R0603" value="Rh"/>
 <part name="C50" library="rcl" deviceset="C-EU" device="C0805" value="0"/>
-<part name="IC10" library="burr-brown" deviceset="OPA2234" device="U"/>
+<part name="IC10" library="burr-brown" deviceset="OPA2234" device="U" value="LM358"/>
 <part name="X8" library="con-phoenix-381_l" deviceset="MC2" device=""/>
 <part name="D8" library="diode" deviceset="BAT54" device=""/>
 <part name="R48" library="rcl" deviceset="R-EU_" device="R0805" value="Rload"/>
@@ -9882,7 +9882,7 @@ http://www.hammondmfg.com/pdf/1591XXA.pdf&lt;br&gt;</description>
 <part name="C55" library="rcl" deviceset="C-EU" device="C0805" value="100n"/>
 <part name="R59" library="rcl" deviceset="R-EU_" device="R0603" value="Rh"/>
 <part name="C56" library="rcl" deviceset="C-EU" device="C0805" value="0"/>
-<part name="IC12" library="linear-technology" deviceset="LTC485" device="S"/>
+<part name="IC12" library="linear-technology" deviceset="LTC485" device="S" value="MAX3072"/>
 <part name="C57" library="rcl" deviceset="C-EU" device="C0805" value=".1u"/>
 <part name="GND79" library="supply1" deviceset="GND" device=""/>
 <part name="P+23" library="supply1" deviceset="VCC" device=""/>
@@ -10017,7 +10017,10 @@ http://www.hammondmfg.com/pdf/1591XXA.pdf&lt;br&gt;</description>
 <instance part="GND16" gate="1" x="304.8" y="182.88"/>
 <instance part="U$1" gate="G$1" x="276.86" y="228.6" rot="MR0"/>
 <instance part="GND11" gate="1" x="271.78" y="213.36"/>
-<instance part="Y1" gate="G$1" x="281.94" y="86.36"/>
+<instance part="Y1" gate="G$1" x="281.94" y="86.36" smashed="yes">
+<attribute name="NAME" x="279.4" y="88.9" size="1.778" layer="95"/>
+<attribute name="VALUE" x="284.48" y="88.9" size="1.778" layer="96"/>
+</instance>
 <instance part="P+10" gate="VCC" x="299.72" y="83.82"/>
 <instance part="C9" gate="G$1" x="292.1" y="55.88"/>
 <instance part="GND18" gate="1" x="292.1" y="43.18"/>
