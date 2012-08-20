@@ -1941,10 +1941,10 @@ design rules under a new name.</description>
 <element name="D2" library="diode" package="SOT23" value="BAT54" x="34.1376" y="14.224" rot="MR90"/>
 <element name="C3" library="rcl" package="C0805" value=".1u" x="19.5072" y="16.6624" rot="R90"/>
 <element name="R4" library="rcl" package="R0805" value="Rload" x="42.672" y="16.256" rot="MR270"/>
-<element name="R5" library="rcl" package="R0603" value="tbd" x="41.8592" y="13.4112" rot="MR0"/>
-<element name="R6" library="rcl" package="R0603" value="tbd" x="36.9824" y="13.0048" rot="MR90"/>
-<element name="R7" library="rcl" package="R0603" value="tbd" x="35.7632" y="17.6784" rot="MR0"/>
-<element name="R8" library="rcl" package="R0603" value="tbd" x="32.9184" y="17.6784" rot="MR0"/>
+<element name="R5" library="rcl" package="R0603" value="10k" x="41.8592" y="13.4112" rot="MR0"/>
+<element name="R6" library="rcl" package="R0603" value="10k" x="36.9824" y="13.0048" rot="MR90"/>
+<element name="R7" library="rcl" package="R0603" value="1k" x="35.7632" y="17.6784" rot="MR0"/>
+<element name="R8" library="rcl" package="R0603" value="3k3" x="32.9184" y="17.6784" rot="MR0"/>
 <element name="R12" library="rcl" package="R0603" value="100k" x="31.2928" y="14.224" rot="MR270"/>
 <element name="C6" library="rcl" package="C0805" value="1u" x="31.0896" y="7.9248" rot="R315"/>
 <element name="C7" library="rcl" package="C0805" value="1u" x="32.3088" y="9.144" rot="R315"/>
@@ -1952,7 +1952,7 @@ design rules under a new name.</description>
 <element name="LED1" library="led" package="SML0805" value="" x="23.5712" y="19.9136" rot="R180"/>
 <element name="R13" library="rcl" package="R0603" value="330" x="23.5712" y="18.288"/>
 <element name="ISP1" library="balto" package="2X03" value="" x="3.4544" y="11.9888" rot="R270"/>
-<element name="C9" library="rcl" package="C0805" value="tbd" x="35.7632" y="19.304" rot="MR0"/>
+<element name="C9" library="rcl" package="C0805" value="0r" x="35.7632" y="19.304" rot="MR0"/>
 <element name="C10" library="rcl" package="C0805" value="1u" x="41.0464" y="16.256" rot="MR90"/>
 <element name="C11" library="rcl" package="C0603" value="1p5" x="12.192" y="18.796" rot="R90"/>
 <element name="R9" library="rcl" package="R0603" value="22k" x="8.7376" y="14.224" rot="R180"/>
@@ -2572,30 +2572,6 @@ design rules under a new name.</description>
 <wire x1="25.2532" y1="4.348" x2="25.1968" y2="4.4044" width="0.4064" layer="1"/>
 </signal>
 </signals>
-<errors>
-<approved hash="5,1,f906ddc26f79afd6"/>
-<approved hash="5,1,d912984c606ce937"/>
-<approved hash="5,1,fc308c5ebd02e3d9"/>
-<approved hash="5,1,be765473c7e2c221"/>
-<approved hash="19,1,f076e33748540aa2"/>
-<approved hash="19,1,7d24bb7c5d0f059c"/>
-<approved hash="19,1,ae9e12fc7b68f575"/>
-<approved hash="5,1,60a914facd0dc6ae"/>
-<approved hash="5,1,8fe4ec8da419b5ad"/>
-<approved hash="5,1,30ca24a72db137ea"/>
-<approved hash="5,1,e7f3c1ecc97cf715"/>
-<approved hash="5,1,b85c4de55fd76e30"/>
-<approved hash="5,1,c91ddeaa9eab891c"/>
-<approved hash="5,1,688482bdfd3ab33a"/>
-<approved hash="5,1,fbb9e849c7bda44e"/>
-<approved hash="5,1,3eda1157eecbc146"/>
-<approved hash="5,1,c3e1ac0606c3ceda"/>
-<approved hash="5,1,d8f2d6038d45241d"/>
-<approved hash="5,1,41ab4294b2aa7594"/>
-<approved hash="5,16,67dec4a5dd238843"/>
-<approved hash="5,16,8f0d22228554d39b"/>
-<approved hash="5,16,9622215285a4c7b4"/>
-</errors>
 </board>
 </drawing>
 </eagle>

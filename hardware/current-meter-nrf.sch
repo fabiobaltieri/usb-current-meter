@@ -10744,11 +10744,11 @@ Standard 150mA LDO voltage regulator in SOT-23 layout. Micrel part MIC5205. BP (
 <part name="P+5" library="supply1" deviceset="VCC" device=""/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
 <part name="R4" library="rcl" deviceset="R-EU_" device="R0805" value="Rload"/>
-<part name="R5" library="rcl" deviceset="R-EU_" device="R0603" value="tbd"/>
-<part name="R6" library="rcl" deviceset="R-EU_" device="R0603" value="tbd"/>
+<part name="R5" library="rcl" deviceset="R-EU_" device="R0603" value="10k"/>
+<part name="R6" library="rcl" deviceset="R-EU_" device="R0603" value="10k"/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
-<part name="R7" library="rcl" deviceset="R-EU_" device="R0603" value="tbd"/>
-<part name="R8" library="rcl" deviceset="R-EU_" device="R0603" value="tbd"/>
+<part name="R7" library="rcl" deviceset="R-EU_" device="R0603" value="1k"/>
+<part name="R8" library="rcl" deviceset="R-EU_" device="R0603" value="3k3"/>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
 <part name="GND12" library="supply1" deviceset="GND" device=""/>
@@ -10766,7 +10766,7 @@ Standard 150mA LDO voltage regulator in SOT-23 layout. Micrel part MIC5205. BP (
 <part name="P+9" library="supply1" deviceset="VCC" device=""/>
 <part name="GND16" library="supply1" deviceset="GND" device=""/>
 <part name="LICENSE1" library="balto" deviceset="CC_BY-SA" device="" value="Fabio Baltieri"/>
-<part name="C9" library="rcl" deviceset="C-EU" device="C0805" value="tbd"/>
+<part name="C9" library="rcl" deviceset="C-EU" device="C0805" value="0r"/>
 <part name="C10" library="rcl" deviceset="C-EU" device="C0805" value="1u"/>
 <part name="C11" library="rcl" deviceset="C-EU" device="C0603" value="1p5"/>
 <part name="R9" library="rcl" deviceset="R-EU_" device="R0603" value="22k"/>
