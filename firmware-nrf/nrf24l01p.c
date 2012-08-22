@@ -51,8 +51,8 @@ void nrf_write_reg(uint8_t addr, uint8_t data)
 {
 	nrf_cs_l();
 
-	spi_io(CMD_W_REGISTER | addr);
-	spi_io(data);
+	spi_o(CMD_W_REGISTER | addr);
+	spi_o(data);
 
 	nrf_cs_h();
 }
@@ -102,9 +102,9 @@ static void nrf_write_payload(uint8_t *buf, uint8_t size)
 
 	nrf_cs_l();
 
-	spi_io(CMD_W_TX_PAYLOAD);
+	spi_o(CMD_W_TX_PAYLOAD);
 	for (i = 0; i < size; i++)
-		spi_io(buf[i]);
+		spi_o(buf[i]);
 
 	nrf_cs_h();
 }
