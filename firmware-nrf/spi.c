@@ -27,6 +27,72 @@ void spi_init(void)
 #endif
 }
 
+void spi_o(uint8_t data)
+{
+	__asm__ __volatile__ (
+			"sbrc %[data], 7"        "\n\t"
+			"sbi  %[port], %[mosi]"  "\n\t"
+			"sbrs %[data], 7"        "\n\t"
+			"cbi  %[port], %[mosi]"  "\n\t"
+			"sbi  %[port], %[sck]"   "\n\t"
+			"cbi  %[port], %[sck]"   "\n\t"
+
+			"sbrc %[data], 6"        "\n\t"
+			"sbi  %[port], %[mosi]"  "\n\t"
+			"sbrs %[data], 6"        "\n\t"
+			"cbi  %[port], %[mosi]"  "\n\t"
+			"sbi  %[port], %[sck]"   "\n\t"
+			"cbi  %[port], %[sck]"   "\n\t"
+
+			"sbrc %[data], 5"        "\n\t"
+			"sbi  %[port], %[mosi]"  "\n\t"
+			"sbrs %[data], 5"        "\n\t"
+			"cbi  %[port], %[mosi]"  "\n\t"
+			"sbi  %[port], %[sck]"   "\n\t"
+			"cbi  %[port], %[sck]"   "\n\t"
+
+			"sbrc %[data], 4"        "\n\t"
+			"sbi  %[port], %[mosi]"  "\n\t"
+			"sbrs %[data], 4"        "\n\t"
+			"cbi  %[port], %[mosi]"  "\n\t"
+			"sbi  %[port], %[sck]"   "\n\t"
+			"cbi  %[port], %[sck]"   "\n\t"
+
+			"sbrc %[data], 3"        "\n\t"
+			"sbi  %[port], %[mosi]"  "\n\t"
+			"sbrs %[data], 3"        "\n\t"
+			"cbi  %[port], %[mosi]"  "\n\t"
+			"sbi  %[port], %[sck]"   "\n\t"
+			"cbi  %[port], %[sck]"   "\n\t"
+
+			"sbrc %[data], 2"        "\n\t"
+			"sbi  %[port], %[mosi]"  "\n\t"
+			"sbrs %[data], 2"        "\n\t"
+			"cbi  %[port], %[mosi]"  "\n\t"
+			"sbi  %[port], %[sck]"   "\n\t"
+			"cbi  %[port], %[sck]"   "\n\t"
+
+			"sbrc %[data], 1"        "\n\t"
+			"sbi  %[port], %[mosi]"  "\n\t"
+			"sbrs %[data], 1"        "\n\t"
+			"cbi  %[port], %[mosi]"  "\n\t"
+			"sbi  %[port], %[sck]"   "\n\t"
+			"cbi  %[port], %[sck]"   "\n\t"
+
+			"sbrc %[data], 0"        "\n\t"
+			"sbi  %[port], %[mosi]"  "\n\t"
+			"sbrs %[data], 0"        "\n\t"
+			"cbi  %[port], %[mosi]"  "\n\t"
+			"sbi  %[port], %[sck]"   "\n\t"
+			"cbi  %[port], %[sck]"   "\n\t"
+
+			: /* no output */
+			: [port] "I" (_SFR_IO_ADDR(SPI_PORT)),
+			  [mosi] "I" (SPI_MOSI),
+			  [sck]  "I" (SPI_SCK),
+			  [data] "r" (data));
+}
+
 uint8_t spi_io(uint8_t data)
 {
 	uint8_t ret = 0;
