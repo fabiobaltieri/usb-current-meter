@@ -21,6 +21,8 @@
 #include "adc.h"
 #include "nrf24l01p.h"
 
+#define div_round(a, b) (((a) + ((b)/2)) / (b))
+
 static uint8_t buf[16];
 
 static void hello(void)
@@ -49,6 +51,10 @@ ISR(WDT_vect)
 	val = adc_get(ADC_COIL);
 	buf[8] = val >> 8;
 	buf[9] = val & 0xff;
+	val = adc_get(ADC_VCC);
+	val = div_round(1100l * 1024, val);
+	buf[10] = val >> 8;
+	buf[11] = val & 0xff;
 	adc_stop();
 
 	led_a_on();
