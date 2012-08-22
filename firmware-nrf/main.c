@@ -18,6 +18,7 @@
 #include "board.h"
 
 #include "spi.h"
+#include "adc.h"
 #include "nrf24l01p.h"
 
 static uint8_t buf[16];
@@ -42,6 +43,14 @@ ISR(INT0_vect)
 
 ISR(WDT_vect)
 {
+	uint16_t val;
+
+	adc_init();
+	val = adc_get(ADC_COIL);
+	buf[8] = val >> 8;
+	buf[9] = val & 0xff;
+	adc_stop();
+
 	led_a_on();
 	nrf_standby();
 	led_a_toggle();

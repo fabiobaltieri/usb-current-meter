@@ -31,7 +31,7 @@ CFLAGS  = -Os -Wall -mmcu=$(MCU) -DF_CPU=$(F_CPU)
 ASFLAGS =
 LDFLAGS =
 
-OBJS = version.o main.o spi.o nrf24l01p.o
+OBJS = version.o main.o spi.o adc.o nrf24l01p.o
 
 # ----- Verbosity control -----------------------------------------------------
 

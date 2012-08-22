@@ -24,13 +24,9 @@ void adc_init(void)
 		   (0 << ADATE) | /* free running     */
 		   (1 << ADIF)  | /* clear interrupts */
 		   (0 << ADIE)  | /* interrupt enable */
-		   (1 << ADPS2) | (1 << ADPS1) | (1 << ADPS0) );
+		   (0 << ADPS2) | (1 << ADPS1) | (1 << ADPS0) );
 
-	/* 16.5Mhz / 128 = 129kHz */
-
-	/* turn on bandgap */
-	ADMUX = _BV(REFS2) | _BV(REFS1);
-	_delay_us(70);
+	/* 1Mhz / 8 = 125kHz */
 }
 
 void adc_stop(void)
@@ -43,7 +39,7 @@ uint16_t adc_get (uint8_t cfg)
 	ADMUX = cfg;
 
 	/* wait signals to stabilize */
-	_delay_us(10);
+	_delay_us(70);
 
 	ADCSRA |= _BV(ADSC);
 

@@ -44,11 +44,10 @@
 	} while (0);
 
 /* ADC */
-#define ADC_COIL       (_BV(REFS1) | 0x02)
-#define ADC_OFFSET_1X  (_BV(REFS1) | 0x04)
-#define ADC_OFFSET_20X (_BV(REFS1) | 0x05)
-#define ADC_COIL_1X    (_BV(REFS1) | 0x06)
-#define ADC_COIL_20X   (_BV(REFS1) | 0x07)
+#define ADC_COIL       (_BV(REFS1) | 0x01)
+#define ADC_OFFSET_20X (_BV(REFS1) | 0x23)
+#define ADC_COIL_1X    (_BV(REFS1) | 0x24)
+#define ADC_COIL_20X   (_BV(REFS1) | 0x25)
 
 #define AMP_TH 45 /* ~ 1024 / 20 */
 #define ADC_VREF_mV (1100 / 4)
