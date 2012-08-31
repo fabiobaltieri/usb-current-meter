@@ -27,7 +27,7 @@ SIZE = $(CROSS_COMPILE)size
 AVRDUDE = avrdude
 AVRDUDEFLAGS = -cusbasp -p$(MCU) -B4
 
-CFLAGS  = -Os -Wall -mmcu=$(MCU) -DF_CPU=$(F_CPU)
+CFLAGS  = -Wall -mmcu=$(MCU) -DF_CPU=$(F_CPU)
 ASFLAGS =
 LDFLAGS =
 
