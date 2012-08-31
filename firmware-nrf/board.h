@@ -46,8 +46,8 @@
 /* ADC */
 #define ADC_COIL       (_BV(REFS1) | 0x01)
 #define ADC_OFFSET_20X (_BV(REFS1) | 0x23)
-#define ADC_COIL_1X    (_BV(REFS1) | 0x24)
-#define ADC_COIL_20X   (_BV(REFS1) | 0x25)
+#define ADC_COIL_1X    (_BV(REFS1) | 0x28)
+#define ADC_COIL_20X   (_BV(REFS1) | 0x29)
 #define ADC_VCC        (0x21)
 
 #define AMP_TH 45 /* ~ 1024 / 20 */
