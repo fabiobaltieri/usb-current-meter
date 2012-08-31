@@ -74,13 +74,18 @@ ISR(WDT_vect)
 	uint16_t val;
 
 	adc_init();
-	val = adc_get(ADC_COIL);
-	buf[8] = val >> 8;
-	buf[9] = val & 0xff;
+	val = get_power();
+	buf[9] = '0' + (val) % 10;
+	buf[8] = '0' + (val / 10) % 10;
+	buf[7] = '0' + (val / 100) % 10;
+	buf[6] = '0' + (val / 1000) % 10;
+
 	val = adc_get(ADC_VCC);
 	val = div_round(1100l * 1024, val);
-	buf[10] = val >> 8;
-	buf[11] = val & 0xff;
+	buf[14] = '0' + (val) % 10;
+	buf[13] = '0' + (val / 10) % 10;
+	buf[12] = '0' + (val / 100) % 10;
+	buf[11] = '0' + (val / 1000) % 10;
 	adc_stop();
 
 	led_a_on();
