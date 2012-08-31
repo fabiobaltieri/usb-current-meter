@@ -35,6 +35,32 @@ static void hello(void)
 	}
 }
 
+static uint16_t get_power(void)
+{
+	uint32_t value;
+	uint16_t offset;
+	uint8_t gain;
+
+	offset = 0;
+	value  = adc_get(ADC_COIL);
+
+	if (value < AMP_TH) {
+		offset = adc_get(ADC_OFFSET_20X);
+		value  = adc_get(ADC_COIL_20X);
+		gain = 20;
+	} else {
+		gain = 1;
+	}
+
+	if (value < offset)
+		value = 0;
+	else
+		value = div_round((value - offset) * ADC_VREF_mV * CAL_POWER,
+				ADC_VREF_BITS * CAL_VOLTAGE * (uint32_t)gain);
+
+	return value;
+}
+
 /* RF_IRQ */
 ISR(INT0_vect)
 {
