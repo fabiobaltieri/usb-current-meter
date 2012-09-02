@@ -17,6 +17,7 @@
 
 #include "board.h"
 
+#include "id.h"
 #include "spi.h"
 #include "adc.h"
 #include "nrf24l01p.h"
@@ -99,6 +100,8 @@ ISR(WDT_vect)
 
 int main(void)
 {
+	read_board_id();
+
 	led_init();
 	analog_init();
 	spi_init();
