@@ -22,9 +22,11 @@
 #include "adc.h"
 #include "nrf24l01p.h"
 
+#include "nrf_frames.h"
+
 #define div_round(a, b) (((a) + ((b)/2)) / (b))
 
-static uint8_t buf[16];
+static struct nrf_frame pkt;
 
 static void hello(void)
 {
@@ -73,29 +75,27 @@ ISR(INT0_vect)
 ISR(WDT_vect)
 {
 	uint16_t val;
+	struct nrf_power *pwr = &pkt.msg.power;
 
 	adc_init();
 	val = get_power();
-	buf[9] = '0' + (val) % 10;
-	buf[8] = '0' + (val / 10) % 10;
-	buf[7] = '0' + (val / 100) % 10;
-	buf[6] = '0' + (val / 1000) % 10;
+	pwr->value[3] = pwr->value[2];
+	pwr->value[2] = pwr->value[1];
+	pwr->value[1] = pwr->value[0];
+	pwr->value[0] = val;
 
 	val = adc_get(ADC_VCC);
 	val = div_round(1100l * 1024, val);
-	buf[14] = '0' + (val) % 10;
-	buf[13] = '0' + (val / 10) % 10;
-	buf[12] = '0' + (val / 100) % 10;
-	buf[11] = '0' + (val / 1000) % 10;
+	pwr->vbatt = val;
 	adc_stop();
 
 	led_a_on();
 	nrf_standby();
 	led_a_toggle();
-	nrf_tx(buf, sizeof(buf));
+	nrf_tx((uint8_t *)&pkt, sizeof(pkt));
 	led_a_toggle();
 
-	buf[15]++;
+	pkt.seq++;
 }
 
 int main(void)
@@ -128,11 +128,10 @@ int main(void)
 	hello();
 	sei();
 
-	buf[0] = 'p';
-	buf[1] = 'o';
-	buf[2] = 'w';
-	buf[3] = 'e';
-	buf[4] = 'r';
+	pkt.board_id = get_board_id();
+	pkt.msg_id = NRF_MSG_ID_POWER;
+	pkt.seq = 0;
+	pkt.flags = 0x00;
 
 	while (1) {
 		set_sleep_mode(SLEEP_MODE_PWR_DOWN);
