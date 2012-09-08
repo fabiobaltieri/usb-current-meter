@@ -4,6 +4,10 @@ USB Current Meter
 This is a set of projects used to monitor the power used in an electrical
 system using split core current sensors.
 
+Project page on:
+
+http://fabiobaltieri.com/2012/08/09/usb-current-meter/
+
 License
 -------
 
