@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.1">
+<eagle version="6.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -8630,7 +8630,7 @@ Source: www.kingbright.com</description>
 <part name="C1" library="rcl" deviceset="C-EU" device="C0805" value="100n"/>
 <part name="R1" library="rcl" deviceset="R-EU_" device="R0603" value="68"/>
 <part name="X3" library="SparkFun" deviceset="USB" device="-A-H"/>
-<part name="IC2" library="burr-brown" deviceset="OPA2234" device="U" value="LM358">
+<part name="IC2" library="burr-brown" deviceset="OPA2234" device="U" value="LT2078">
 <variant name="bias" populate="no" value="OPA2234U"/>
 </part>
 <part name="X1" library="con-phoenix-381_l" deviceset="MC2" device=""/>
