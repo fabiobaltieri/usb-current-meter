@@ -28,6 +28,7 @@ AVRDUDE = avrdude
 AVRDUDEFLAGS = -cusbasp -p$(MCU) -B4
 
 CFLAGS  = -Wall -mmcu=$(MCU) -DF_CPU=$(F_CPU)
+CFLAGS += -ffunction-sections -Wl,--relax -Wl,--gc-sections #-Wl,--print-gc-sections
 ASFLAGS =
 LDFLAGS =
 
