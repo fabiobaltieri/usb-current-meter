@@ -130,8 +130,8 @@ int main(void)
 
 	pkt.board_id = get_board_id();
 	pkt.msg_id = NRF_MSG_ID_POWER;
+	pkt.len = 16;
 	pkt.seq = 0;
-	pkt.flags = 0x00;
 
 	while (1) {
 		set_sleep_mode(SLEEP_MODE_PWR_DOWN);
