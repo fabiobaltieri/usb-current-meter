@@ -15,8 +15,8 @@ NAME = main
 MCU = attiny24
 F_CPU = 1000000UL
 
-LFUSE = 0xd0
-HFUSE = 0xd9
+LFUSE = 0x62
+HFUSE = 0xdf
 
 CROSS_COMPILE = avr-
 CC = $(CROSS_COMPILE)gcc
