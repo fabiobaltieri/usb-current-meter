@@ -9973,6 +9973,28 @@ http://www.hammondmfg.com/pdf/1591XXA.pdf&lt;br&gt;</description>
 <wire x1="386.08" y1="124.46" x2="261.62" y2="124.46" width="0.1524" layer="97"/>
 <wire x1="386.08" y1="124.46" x2="386.08" y2="175.26" width="0.1524" layer="97"/>
 <text x="264.16" y="167.64" size="5.08" layer="97">485</text>
+<wire x1="355.6" y1="218.44" x2="355.6" y2="177.8" width="0.1524" layer="97"/>
+<wire x1="383.54" y1="218.44" x2="383.54" y2="177.8" width="0.1524" layer="97"/>
+<wire x1="355.6" y1="218.44" x2="383.54" y2="218.44" width="0.1524" layer="97"/>
+<wire x1="355.6" y1="177.8" x2="383.54" y2="177.8" width="0.1524" layer="97"/>
+<text x="358.14" y="210.82" size="5.08" layer="97">Bidge</text>
+<text x="25.4" y="297.18" size="1.778" layer="97">Pmax = 6500 W</text>
+<text x="25.4" y="294.64" size="1.778" layer="97">Irms = Pmax / 230 = 28.2 A</text>
+<text x="25.4" y="292.1" size="1.778" layer="97">Ipk = Irms * sqrt(2) = 40.0 A</text>
+<text x="25.4" y="289.56" size="1.778" layer="97">Vpk = .333 / 20 * Ipk = .665 V</text>
+<text x="25.4" y="287.02" size="1.778" layer="97">Vavg = Vpk * 2 / pi = .424 V</text>
+<text x="5.08" y="276.86" size="1.778" layer="97">Gain = 3.3 / .12 + 1 = 28.5</text>
+<text x="5.08" y="274.32" size="1.778" layer="97">Vpk_post = Vpk * Gain = 18.965 V</text>
+<text x="5.08" y="271.78" size="1.778" layer="97">Vavg_post = Vavg * Gain = 12.074 V</text>
+<wire x1="2.54" y1="266.7" x2="2.54" y2="299.72" width="0.1524" layer="97"/>
+<text x="25.4" y="281.94" size="1.778" layer="97">Rh = 120 Ohm, Rl = 2200 Ohm, Rx = 3300 Ohm</text>
+<text x="60.96" y="276.86" size="1.778" layer="97">Gain = 3.3 / 2.22 + 1 = 2.42</text>
+<text x="60.96" y="274.32" size="1.778" layer="97">Vpk_post = Vpk * Gain = 1.612 V</text>
+<text x="60.96" y="271.78" size="1.778" layer="97">Vavg_post = Vavg * Gain = 1.026 V</text>
+<wire x1="114.3" y1="266.7" x2="114.3" y2="299.72" width="0.1524" layer="97"/>
+<wire x1="2.54" y1="299.72" x2="114.3" y2="299.72" width="0.1524" layer="97"/>
+<wire x1="114.3" y1="266.7" x2="2.54" y2="266.7" width="0.1524" layer="97"/>
+<text x="5.08" y="269.24" size="1.778" layer="97">Psatuation = 592 W</text>
 </plain>
 <instances>
 <instance part="GND1" gate="1" x="284.48" y="223.52"/>
@@ -10540,9 +10562,9 @@ http://www.hammondmfg.com/pdf/1591XXA.pdf&lt;br&gt;</description>
 <instance part="P+26" gate="VCC" x="332.74" y="154.94"/>
 <instance part="GND82" gate="1" x="332.74" y="137.16"/>
 <instance part="BOX1" gate="G$1" x="269.24" y="27.94"/>
-<instance part="D9" gate="G$1" x="368.3" y="198.12" rot="R270"/>
-<instance part="P+25" gate="1" x="375.92" y="205.74" smashed="yes">
-<attribute name="VALUE" x="373.38" y="203.2" size="1.778" layer="96" rot="R90"/>
+<instance part="D9" gate="G$1" x="370.84" y="190.5" rot="R270"/>
+<instance part="P+25" gate="1" x="378.46" y="198.12" smashed="yes">
+<attribute name="VALUE" x="375.92" y="195.58" size="1.778" layer="96" rot="R90"/>
 </instance>
 </instances>
 <busses>
@@ -11085,8 +11107,8 @@ http://www.hammondmfg.com/pdf/1591XXA.pdf&lt;br&gt;</description>
 <segment>
 <pinref part="D9" gate="G$1" pin="CC"/>
 <pinref part="P+25" gate="1" pin="+5V"/>
-<wire x1="370.84" y1="198.12" x2="375.92" y2="198.12" width="0.1524" layer="91"/>
-<wire x1="375.92" y1="198.12" x2="375.92" y2="203.2" width="0.1524" layer="91"/>
+<wire x1="373.38" y1="190.5" x2="378.46" y2="190.5" width="0.1524" layer="91"/>
+<wire x1="378.46" y1="190.5" x2="378.46" y2="195.58" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VCC" class="0">
@@ -12391,9 +12413,9 @@ http://www.hammondmfg.com/pdf/1591XXA.pdf&lt;br&gt;</description>
 </segment>
 <segment>
 <pinref part="D9" gate="G$1" pin="A1"/>
-<wire x1="368.3" y1="203.2" x2="368.3" y2="205.74" width="0.1524" layer="91"/>
-<wire x1="368.3" y1="205.74" x2="358.14" y2="205.74" width="0.1524" layer="91"/>
-<label x="358.14" y="205.74" size="1.778" layer="95"/>
+<wire x1="370.84" y1="195.58" x2="370.84" y2="198.12" width="0.1524" layer="91"/>
+<wire x1="370.84" y1="198.12" x2="360.68" y2="198.12" width="0.1524" layer="91"/>
+<label x="360.68" y="198.12" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="VIN_USB" class="0">
@@ -12405,9 +12427,9 @@ http://www.hammondmfg.com/pdf/1591XXA.pdf&lt;br&gt;</description>
 </segment>
 <segment>
 <pinref part="D9" gate="G$1" pin="A2"/>
-<wire x1="368.3" y1="193.04" x2="368.3" y2="190.5" width="0.1524" layer="91"/>
-<wire x1="368.3" y1="190.5" x2="358.14" y2="190.5" width="0.1524" layer="91"/>
-<label x="358.14" y="190.5" size="1.778" layer="95" rot="MR180"/>
+<wire x1="370.84" y1="185.42" x2="370.84" y2="182.88" width="0.1524" layer="91"/>
+<wire x1="370.84" y1="182.88" x2="360.68" y2="182.88" width="0.1524" layer="91"/>
+<label x="360.68" y="182.88" size="1.778" layer="95" rot="MR180"/>
 </segment>
 </net>
 </nets>
