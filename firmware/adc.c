@@ -43,7 +43,7 @@ uint16_t adc_get (uint8_t cfg)
 	ADMUX = cfg;
 
 	/* wait signals to stabilize */
-	_delay_us(70);
+	_delay_us(200);
 
 	ADCSRA |= _BV(ADSC);
 
