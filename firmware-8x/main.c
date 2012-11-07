@@ -187,13 +187,13 @@ static void buffer_get(void)
 
 static void timer_setup(void)
 {
-		OCR0A = F_CPU / 1024 / 100; /* about 100 Hz */
+	OCR0A = F_CPU / 1024 / 100; /* about 100 Hz */
 
-		TIFR0 |= _BV(OCIE0A);
+	TIFR0 |= _BV(OCIE0A);
 
-		TCCR0A = ( (1 << WGM01) | (0 << WGM00) );
-		TCCR0B = ( (0 << WGM02) |
-			   (1 << CS02) | (0 << CS01) | (1 << CS00) );
+	TCCR0A = ( (1 << WGM01) | (0 << WGM00) );
+	TCCR0B = ( (0 << WGM02) |
+			(1 << CS02) | (0 << CS01) | (1 << CS00) );
 }
 
 usbMsgLen_t usbFunctionSetup(uint8_t data[8])
