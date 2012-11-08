@@ -221,7 +221,7 @@ static void initForUsbConnectivity(void)
 
 int __attribute__((noreturn)) main(void)
 {
-	uint16_t blink;
+	uint16_t blink = 0;
 	volatile int zero = 0;
 
 	loop = 0;
