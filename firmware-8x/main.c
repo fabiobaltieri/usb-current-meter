@@ -229,10 +229,18 @@ int __attribute__((noreturn)) main(void)
 	led_a_off();
 
 	adc_init();
-	change_channel_gain(0);
 	DIDR0 |= _BV(ADC5D) | _BV(ADC4D) |
 		 _BV(ADC3D) | _BV(ADC2D) |
 		 _BV(ADC1D) | _BV(ADC0D);
+
+	set_low_gain_ch0();
+	set_low_gain_ch1();
+	set_low_gain_ch2();
+	set_low_gain_ch3();
+	set_low_gain_ch4();
+	set_low_gain_ch5();
+	set_low_gain_ch6();
+	set_low_gain_ch7();
 
 	wdt_enable(WDTO_1S);
 
