@@ -125,6 +125,7 @@ static void set_low_gain(uint8_t channel)
 
 static void change_channel_gain(uint8_t channel)
 {
+#if 0
 	if (!is_high_gain(gain_mask, channel) &&
 			buffer_values[channel] < AMP_TH_L) {
 		set_high_gain(channel);
@@ -132,6 +133,9 @@ static void change_channel_gain(uint8_t channel)
 			buffer_values[channel] > AMP_TH_H) {
 		set_low_gain(channel);
 	}
+#else
+	set_low_gain(channel);
+#endif
 
 	adc_set_channel(map[channel]);
 }
