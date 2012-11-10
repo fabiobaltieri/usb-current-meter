@@ -31,6 +31,8 @@ static const uint8_t map[NR_CHANNELS] = {
 	5, 4, 3, 2, 1, 0, 7, 6
 };
 
+static uint16_t blink_counter = 0;
+
 static void reset_cpu(void)
 {
 	wdt_disable();
@@ -198,13 +200,27 @@ static void timer_setup(void)
 			(1 << CS02) | (0 << CS01) | (1 << CS00) );
 }
 
+static void blink(void)
+{
+	led_a_off();
+	blink_counter = 15000;
+}
+
+static void blink_poll(void)
+{
+	if (blink_counter)
+		blink_counter--;
+	else
+		led_a_on();
+}
+
 usbMsgLen_t usbFunctionSetup(uint8_t data[8])
 {
 	struct usbRequest *rq = (void *)data;
 
 	switch (rq->bRequest) {
 	case CUSTOM_RQ_GET_VALUES:
-		led_a_toggle();
+		blink();
 		buffer_get();
 		usbMsgPtr = (uint8_t *)&hf;
 		return sizeof(hf);
@@ -275,5 +291,6 @@ int __attribute__((noreturn)) main(void)
 		wdt_reset();
 		usbPoll();
 		buffer_poll();
+		blink_poll();
 	}
 }
