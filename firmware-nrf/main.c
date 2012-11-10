@@ -89,6 +89,9 @@ ISR(WDT_vect)
 	pwr->vbatt = val;
 	adc_stop();
 
+	if (is_charging())
+		pwr->vbatt |= NRF_POWER_VBATT_CHARGING;
+
 	led_a_on();
 	nrf_standby();
 	led_a_toggle();
@@ -105,6 +108,7 @@ int main(void)
 	led_init();
 	analog_init();
 	spi_init();
+	chg_init();
 
 	led_a_on();
 	analog_on();

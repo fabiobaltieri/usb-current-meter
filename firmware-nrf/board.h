@@ -20,6 +20,14 @@
 #define SPI_MISO PA5
 #define SPI_MOSI PA6
 
+/* Charger */
+#define CHG_PORT	PORTA
+#define CHG_PIN		PINA
+#define CHG		PA7
+
+#define chg_init()	do { CHG_PORT |= _BV(CHG); } while (0)
+#define is_charging()	(!(PINA & _BV(PA7)))
+
 /* nRF24L01+ SPI */
 #define NRF_DDR  DDRA
 #define NRF_PORT PORTA
