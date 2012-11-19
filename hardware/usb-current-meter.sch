@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.2">
+<eagle version="6.3">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -8801,6 +8801,7 @@ Source: www.kingbright.com</description>
 <wire x1="88.9" y1="30.48" x2="88.9" y2="2.54" width="0.1524" layer="97"/>
 <wire x1="88.9" y1="2.54" x2="33.02" y2="2.54" width="0.1524" layer="97"/>
 <wire x1="33.02" y1="2.54" x2="33.02" y2="30.48" width="0.1524" layer="97"/>
+<text x="177.8" y="73.66" size="1.778" layer="97" rot="MR180">&lt;- replace with 0 Ohm resistor</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
