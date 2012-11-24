@@ -238,7 +238,7 @@ void nrf_irq(void)
 
 	/* TX data sent */
 	if (status & TX_DS) {
-		nrf_standby();
+		/* nrf_standby(); */
 		nrf_powerdown();
 	}
 
