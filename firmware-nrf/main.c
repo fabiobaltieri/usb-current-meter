@@ -92,11 +92,10 @@ ISR(WDT_vect)
 	if (is_charging())
 		pwr->vbatt |= NRF_POWER_VBATT_CHARGING;
 
-	led_a_on();
 	nrf_standby();
-	led_a_toggle();
 	nrf_tx((uint8_t *)&pkt, sizeof(pkt));
-	led_a_toggle();
+
+	led_a_on();
 
 	pkt.seq++;
 }
