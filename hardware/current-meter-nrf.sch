@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.2">
+<eagle version="6.3">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -10332,93 +10332,6 @@ DIN A4, landscape with extra doc field</description>
 </library>
 <library name="hammond">
 <packages>
-<package name="1151H">
-<wire x1="6.25" y1="0" x2="53" y2="0" width="0" layer="20"/>
-<wire x1="53" y1="0" x2="54" y2="1" width="0" layer="20" curve="90"/>
-<wire x1="54" y1="1" x2="54" y2="22.75" width="0" layer="20"/>
-<wire x1="47.75" y1="29" x2="1" y2="29" width="0" layer="20"/>
-<wire x1="1" y1="29" x2="0" y2="28" width="0" layer="20" curve="90"/>
-<wire x1="0" y1="28" x2="0" y2="6.25" width="0" layer="20"/>
-<wire x1="6.25" y1="0" x2="6.25" y2="3.25" width="0" layer="20"/>
-<wire x1="6.25" y1="3.25" x2="3.25" y2="6.25" width="0" layer="20" curve="90"/>
-<wire x1="3.25" y1="6.25" x2="0" y2="6.25" width="0" layer="20"/>
-<wire x1="54" y1="22.75" x2="50.75" y2="22.75" width="0" layer="20"/>
-<wire x1="50.75" y1="22.75" x2="47.75" y2="25.75" width="0" layer="20" curve="-90"/>
-<wire x1="47.75" y1="25.75" x2="47.75" y2="29" width="0" layer="20"/>
-<hole x="37" y="2.75" drill="2.5"/>
-<hole x="17" y="26.25" drill="2.5"/>
-<dimension x1="1" y1="29" x2="15" y2="0" x3="-14.5" y3="14.5" layer="47" dtype="vertical"/>
-<dimension x1="0" y1="6.25" x2="54" y2="4.5" x3="27" y3="-16.25" layer="47" dtype="horizontal"/>
-<dimension x1="17.8609375" y1="27.15625" x2="16.1390625" y2="25.34375" x3="20.692509375" y3="22.742115625" layer="47" dtype="diameter"/>
-<dimension x1="17" y1="26.25" x2="37" y2="2.75" x3="27" y3="-9.25" layer="47" dtype="horizontal"/>
-<dimension x1="17" y1="26.25" x2="37" y2="2.75" x3="-7.75" y3="14.5" layer="47" dtype="vertical"/>
-<dimension x1="47.75" y1="25.75" x2="47.75" y2="29" x3="72.75" y3="27.375" layer="47"/>
-<dimension x1="54" y1="22.75" x2="50.75" y2="22.75" x3="52.375" y3="43.25" layer="47"/>
-<dimension x1="50.75" y1="25.75" x2="48.497859375" y2="23.768115625" x3="40.460146875" y3="21.094928125" layer="47" dtype="radius"/>
-<dimension x1="53" y1="1" x2="53.7633875" y2="0.35405625" x3="59.717796875" y3="-4.68429375" layer="47" dtype="radius"/>
-<circle x="17" y="26.25" radius="2.250553125" width="0.127" layer="41"/>
-<circle x="17" y="26.25" radius="2.250553125" width="0.127" layer="42"/>
-<circle x="37" y="2.75" radius="2.250553125" width="0.127" layer="41"/>
-<circle x="37" y="2.75" radius="2.250553125" width="0.127" layer="42"/>
-</package>
-<package name="1151K">
-<wire x1="6.25" y1="0" x2="73" y2="0" width="0" layer="20"/>
-<wire x1="73" y1="0" x2="74" y2="1" width="0" layer="20" curve="90"/>
-<wire x1="74" y1="1" x2="74" y2="27.75" width="0" layer="20"/>
-<wire x1="67.75" y1="34" x2="1" y2="34" width="0" layer="20"/>
-<wire x1="1" y1="34" x2="0" y2="33" width="0" layer="20" curve="90"/>
-<wire x1="0" y1="33" x2="0" y2="6.25" width="0" layer="20"/>
-<wire x1="6.25" y1="0" x2="6.25" y2="3.25" width="0" layer="20"/>
-<wire x1="6.25" y1="3.25" x2="3.25" y2="6.25" width="0" layer="20" curve="90"/>
-<wire x1="3.25" y1="6.25" x2="0" y2="6.25" width="0" layer="20"/>
-<wire x1="74" y1="27.75" x2="70.75" y2="27.75" width="0" layer="20"/>
-<wire x1="70.75" y1="27.75" x2="67.75" y2="30.75" width="0" layer="20" curve="-90"/>
-<wire x1="67.75" y1="30.75" x2="67.75" y2="34" width="0" layer="20"/>
-<hole x="57" y="2.75" drill="2.5"/>
-<hole x="17" y="31.25" drill="2.5"/>
-<dimension x1="1" y1="34" x2="15" y2="0" x3="-14.5" y3="17" layer="47" dtype="vertical"/>
-<dimension x1="0" y1="6.25" x2="74" y2="4.5" x3="37" y3="-16.25" layer="47" dtype="horizontal"/>
-<dimension x1="17.8609375" y1="32.15625" x2="16.1390625" y2="30.34375" x3="20.69250625" y3="27.742115625" layer="47" dtype="diameter"/>
-<dimension x1="17" y1="31.25" x2="57" y2="2.75" x3="37" y3="-9.25" layer="47" dtype="horizontal"/>
-<dimension x1="17" y1="31.25" x2="57" y2="2.75" x3="-7.75" y3="17" layer="47" dtype="vertical"/>
-<dimension x1="67.75" y1="30.75" x2="67.75" y2="34" x3="92.75" y3="32.375" layer="47"/>
-<dimension x1="74" y1="27.75" x2="70.75" y2="27.75" x3="72.375" y3="48.25" layer="47"/>
-<dimension x1="70.75" y1="30.75" x2="68.497859375" y2="28.768115625" x3="60.460146875" y3="26.094928125" layer="47" dtype="radius"/>
-<dimension x1="73" y1="1" x2="73.7633875" y2="0.35405625" x3="79.7178" y3="-4.68429375" layer="47" dtype="radius"/>
-<circle x="17" y="31.25" radius="2.250553125" width="0.127" layer="41"/>
-<circle x="17" y="31.25" radius="2.250553125" width="0.127" layer="42"/>
-<circle x="57" y="2.75" radius="2.250553125" width="0.127" layer="41"/>
-<circle x="57" y="2.75" radius="2.250553125" width="0.127" layer="42"/>
-</package>
-<package name="1151R">
-<wire x1="6.25" y1="0" x2="43" y2="0" width="0" layer="20"/>
-<wire x1="43" y1="0" x2="44" y2="1" width="0" layer="20" curve="90"/>
-<wire x1="44" y1="1" x2="44" y2="37.75" width="0" layer="20"/>
-<wire x1="37.75" y1="44" x2="1" y2="44" width="0" layer="20"/>
-<wire x1="1" y1="44" x2="0" y2="43" width="0" layer="20" curve="90"/>
-<wire x1="0" y1="43" x2="0" y2="6.25" width="0" layer="20"/>
-<wire x1="6.25" y1="0" x2="6.25" y2="3.25" width="0" layer="20"/>
-<wire x1="6.25" y1="3.25" x2="3.25" y2="6.25" width="0" layer="20" curve="90"/>
-<wire x1="3.25" y1="6.25" x2="0" y2="6.25" width="0" layer="20"/>
-<wire x1="44" y1="37.75" x2="40.75" y2="37.75" width="0" layer="20"/>
-<wire x1="40.75" y1="37.75" x2="37.75" y2="40.75" width="0" layer="20" curve="-90"/>
-<wire x1="37.75" y1="40.75" x2="37.75" y2="44" width="0" layer="20"/>
-<hole x="34.5" y="2.75" drill="2.5"/>
-<hole x="9.5" y="41.25" drill="2.5"/>
-<dimension x1="1" y1="44" x2="10" y2="0" x3="-14.5" y3="22" layer="47" dtype="vertical"/>
-<dimension x1="0" y1="6.25" x2="44" y2="4.5" x3="22" y3="-21.5" layer="47" dtype="horizontal"/>
-<dimension x1="10.3609375" y1="42.15625" x2="8.6390625" y2="40.34375" x3="14.506571875" y3="36.49375625" layer="47" dtype="diameter"/>
-<dimension x1="9.5" y1="41.25" x2="34.5" y2="2.75" x3="22" y3="-15" layer="47" dtype="horizontal"/>
-<dimension x1="9.5" y1="41.25" x2="32" y2="2.75" x3="-8" y3="22" layer="47" dtype="vertical"/>
-<dimension x1="37.75" y1="40.75" x2="37.75" y2="44" x3="62.75" y3="42.375" layer="47"/>
-<dimension x1="44" y1="37.75" x2="40.75" y2="37.75" x3="42.375" y3="58.25" layer="47"/>
-<dimension x1="40.75" y1="40.75" x2="38.497859375" y2="38.768115625" x3="32.64229375" y3="33.61521875" layer="47" dtype="radius"/>
-<dimension x1="43" y1="1" x2="43.7633875" y2="0.35405625" x3="49.7178" y3="-4.68429375" layer="47" dtype="radius"/>
-<circle x="9.5" y="41.25" radius="2.250553125" width="0.127" layer="41"/>
-<circle x="9.5" y="41.25" radius="2.250553125" width="0.127" layer="42"/>
-<circle x="34.5" y="2.75" radius="2.250553125" width="0.127" layer="41"/>
-<circle x="34.5" y="2.75" radius="2.250553125" width="0.127" layer="42"/>
-</package>
 <package name="1551G">
 <wire x1="6.25" y1="0" x2="43" y2="0" width="0" layer="20"/>
 <wire x1="43" y1="0" x2="44" y2="1" width="0" layer="20" curve="90"/>
@@ -10540,6 +10453,93 @@ DIN A4, landscape with extra doc field</description>
 <circle x="12" y="26.25" radius="2.250553125" width="0.127" layer="42"/>
 <circle x="32" y="2.75" radius="2.250553125" width="0.127" layer="42"/>
 </package>
+<package name="1551H">
+<wire x1="6.25" y1="0" x2="53" y2="0" width="0" layer="20"/>
+<wire x1="53" y1="0" x2="54" y2="1" width="0" layer="20" curve="90"/>
+<wire x1="54" y1="1" x2="54" y2="22.75" width="0" layer="20"/>
+<wire x1="47.75" y1="29" x2="1" y2="29" width="0" layer="20"/>
+<wire x1="1" y1="29" x2="0" y2="28" width="0" layer="20" curve="90"/>
+<wire x1="0" y1="28" x2="0" y2="6.25" width="0" layer="20"/>
+<wire x1="6.25" y1="0" x2="6.25" y2="3.25" width="0" layer="20"/>
+<wire x1="6.25" y1="3.25" x2="3.25" y2="6.25" width="0" layer="20" curve="90"/>
+<wire x1="3.25" y1="6.25" x2="0" y2="6.25" width="0" layer="20"/>
+<wire x1="54" y1="22.75" x2="50.75" y2="22.75" width="0" layer="20"/>
+<wire x1="50.75" y1="22.75" x2="47.75" y2="25.75" width="0" layer="20" curve="-90"/>
+<wire x1="47.75" y1="25.75" x2="47.75" y2="29" width="0" layer="20"/>
+<hole x="37" y="2.75" drill="2.5"/>
+<hole x="17" y="26.25" drill="2.5"/>
+<dimension x1="1" y1="29" x2="15" y2="0" x3="-14.5" y3="14.5" layer="47" dtype="vertical"/>
+<dimension x1="0" y1="6.25" x2="54" y2="4.5" x3="27" y3="-16.25" layer="47" dtype="horizontal"/>
+<dimension x1="17.8609375" y1="27.15625" x2="16.1390625" y2="25.34375" x3="20.692509375" y3="22.742115625" layer="47" dtype="diameter"/>
+<dimension x1="17" y1="26.25" x2="37" y2="2.75" x3="27" y3="-9.25" layer="47" dtype="horizontal"/>
+<dimension x1="17" y1="26.25" x2="37" y2="2.75" x3="-7.75" y3="14.5" layer="47" dtype="vertical"/>
+<dimension x1="47.75" y1="25.75" x2="47.75" y2="29" x3="72.75" y3="27.375" layer="47"/>
+<dimension x1="54" y1="22.75" x2="50.75" y2="22.75" x3="52.375" y3="43.25" layer="47"/>
+<dimension x1="50.75" y1="25.75" x2="48.497859375" y2="23.768115625" x3="40.460146875" y3="21.094928125" layer="47" dtype="radius"/>
+<dimension x1="53" y1="1" x2="53.7633875" y2="0.35405625" x3="59.717796875" y3="-4.68429375" layer="47" dtype="radius"/>
+<circle x="17" y="26.25" radius="2.250553125" width="0.127" layer="41"/>
+<circle x="17" y="26.25" radius="2.250553125" width="0.127" layer="42"/>
+<circle x="37" y="2.75" radius="2.250553125" width="0.127" layer="41"/>
+<circle x="37" y="2.75" radius="2.250553125" width="0.127" layer="42"/>
+</package>
+<package name="1551K">
+<wire x1="6.25" y1="0" x2="73" y2="0" width="0" layer="20"/>
+<wire x1="73" y1="0" x2="74" y2="1" width="0" layer="20" curve="90"/>
+<wire x1="74" y1="1" x2="74" y2="27.75" width="0" layer="20"/>
+<wire x1="67.75" y1="34" x2="1" y2="34" width="0" layer="20"/>
+<wire x1="1" y1="34" x2="0" y2="33" width="0" layer="20" curve="90"/>
+<wire x1="0" y1="33" x2="0" y2="6.25" width="0" layer="20"/>
+<wire x1="6.25" y1="0" x2="6.25" y2="3.25" width="0" layer="20"/>
+<wire x1="6.25" y1="3.25" x2="3.25" y2="6.25" width="0" layer="20" curve="90"/>
+<wire x1="3.25" y1="6.25" x2="0" y2="6.25" width="0" layer="20"/>
+<wire x1="74" y1="27.75" x2="70.75" y2="27.75" width="0" layer="20"/>
+<wire x1="70.75" y1="27.75" x2="67.75" y2="30.75" width="0" layer="20" curve="-90"/>
+<wire x1="67.75" y1="30.75" x2="67.75" y2="34" width="0" layer="20"/>
+<hole x="57" y="2.75" drill="2.5"/>
+<hole x="17" y="31.25" drill="2.5"/>
+<dimension x1="1" y1="34" x2="15" y2="0" x3="-14.5" y3="17" layer="47" dtype="vertical"/>
+<dimension x1="0" y1="6.25" x2="74" y2="4.5" x3="37" y3="-16.25" layer="47" dtype="horizontal"/>
+<dimension x1="17.8609375" y1="32.15625" x2="16.1390625" y2="30.34375" x3="20.69250625" y3="27.742115625" layer="47" dtype="diameter"/>
+<dimension x1="17" y1="31.25" x2="57" y2="2.75" x3="37" y3="-9.25" layer="47" dtype="horizontal"/>
+<dimension x1="17" y1="31.25" x2="57" y2="2.75" x3="-7.75" y3="17" layer="47" dtype="vertical"/>
+<dimension x1="67.75" y1="30.75" x2="67.75" y2="34" x3="92.75" y3="32.375" layer="47"/>
+<dimension x1="74" y1="27.75" x2="70.75" y2="27.75" x3="72.375" y3="48.25" layer="47"/>
+<dimension x1="70.75" y1="30.75" x2="68.497859375" y2="28.768115625" x3="60.460146875" y3="26.094928125" layer="47" dtype="radius"/>
+<dimension x1="73" y1="1" x2="73.7633875" y2="0.35405625" x3="79.7178" y3="-4.68429375" layer="47" dtype="radius"/>
+<circle x="17" y="31.25" radius="2.250553125" width="0.127" layer="41"/>
+<circle x="17" y="31.25" radius="2.250553125" width="0.127" layer="42"/>
+<circle x="57" y="2.75" radius="2.250553125" width="0.127" layer="41"/>
+<circle x="57" y="2.75" radius="2.250553125" width="0.127" layer="42"/>
+</package>
+<package name="1551R">
+<wire x1="6.25" y1="0" x2="43" y2="0" width="0" layer="20"/>
+<wire x1="43" y1="0" x2="44" y2="1" width="0" layer="20" curve="90"/>
+<wire x1="44" y1="1" x2="44" y2="37.75" width="0" layer="20"/>
+<wire x1="37.75" y1="44" x2="1" y2="44" width="0" layer="20"/>
+<wire x1="1" y1="44" x2="0" y2="43" width="0" layer="20" curve="90"/>
+<wire x1="0" y1="43" x2="0" y2="6.25" width="0" layer="20"/>
+<wire x1="6.25" y1="0" x2="6.25" y2="3.25" width="0" layer="20"/>
+<wire x1="6.25" y1="3.25" x2="3.25" y2="6.25" width="0" layer="20" curve="90"/>
+<wire x1="3.25" y1="6.25" x2="0" y2="6.25" width="0" layer="20"/>
+<wire x1="44" y1="37.75" x2="40.75" y2="37.75" width="0" layer="20"/>
+<wire x1="40.75" y1="37.75" x2="37.75" y2="40.75" width="0" layer="20" curve="-90"/>
+<wire x1="37.75" y1="40.75" x2="37.75" y2="44" width="0" layer="20"/>
+<hole x="34.5" y="2.75" drill="2.5"/>
+<hole x="9.5" y="41.25" drill="2.5"/>
+<dimension x1="1" y1="44" x2="10" y2="0" x3="-14.5" y3="22" layer="47" dtype="vertical"/>
+<dimension x1="0" y1="6.25" x2="44" y2="4.5" x3="22" y3="-21.5" layer="47" dtype="horizontal"/>
+<dimension x1="10.3609375" y1="42.15625" x2="8.6390625" y2="40.34375" x3="14.506571875" y3="36.49375625" layer="47" dtype="diameter"/>
+<dimension x1="9.5" y1="41.25" x2="34.5" y2="2.75" x3="22" y3="-15" layer="47" dtype="horizontal"/>
+<dimension x1="9.5" y1="41.25" x2="32" y2="2.75" x3="-8" y3="22" layer="47" dtype="vertical"/>
+<dimension x1="37.75" y1="40.75" x2="37.75" y2="44" x3="62.75" y3="42.375" layer="47"/>
+<dimension x1="44" y1="37.75" x2="40.75" y2="37.75" x3="42.375" y3="58.25" layer="47"/>
+<dimension x1="40.75" y1="40.75" x2="38.497859375" y2="38.768115625" x3="32.64229375" y3="33.61521875" layer="47" dtype="radius"/>
+<dimension x1="43" y1="1" x2="43.7633875" y2="0.35405625" x3="49.7178" y3="-4.68429375" layer="47" dtype="radius"/>
+<circle x="9.5" y="41.25" radius="2.250553125" width="0.127" layer="41"/>
+<circle x="9.5" y="41.25" radius="2.250553125" width="0.127" layer="42"/>
+<circle x="34.5" y="2.75" radius="2.250553125" width="0.127" layer="41"/>
+<circle x="34.5" y="2.75" radius="2.250553125" width="0.127" layer="42"/>
+</package>
 </packages>
 <symbols>
 <symbol name="BOX">
@@ -10585,17 +10585,17 @@ http://www.hammondmfg.com/pdf/1591XXA.pdf&lt;br&gt;</description>
 <gate name="G$1" symbol="BOX" x="0" y="0"/>
 </gates>
 <devices>
-<device name="-H" package="1151H">
+<device name="-H" package="1551H">
 <technologies>
 <technology name=""/>
 </technologies>
 </device>
-<device name="-K" package="1151K">
+<device name="-K" package="1551K">
 <technologies>
 <technology name=""/>
 </technologies>
 </device>
-<device name="-R" package="1151R">
+<device name="-R" package="1551R">
 <technologies>
 <technology name=""/>
 </technologies>
