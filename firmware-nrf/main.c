@@ -119,6 +119,8 @@ int main(void)
 
 	nrf_init();
 
+	PRR = _BV(PRTIM1) | _BV(PRTIM0) | _BV(PRUSI);
+
 	/* WDT as periodic interrupt */
 	WDTCSR |= (1 << WDE) | (1 << WDCE);
 	WDTCSR = (0 << WDCE) | (1 << WDIF) | (1 << WDIE) |
