@@ -79,9 +79,9 @@ ISR(WDT_vect)
 
 	adc_init();
 	val = get_power();
-	pwr->value[3] = pwr->value[2];
-	pwr->value[2] = pwr->value[1];
-	pwr->value[1] = pwr->value[0];
+	pwr->value[3] = -1;
+	pwr->value[2] = -1;
+	pwr->value[1] = -1;
 	pwr->value[0] = val;
 
 	val = adc_get(ADC_VCC);
