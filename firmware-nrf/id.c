@@ -2,7 +2,7 @@
 
 #include "id.h"
 
-static uint8_t EEMEM ee_board_id;
+static uint8_t EEMEM ee_board_id = 0x20;
 static uint8_t board_id;
 
 void read_board_id(void)
