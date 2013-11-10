@@ -68,3 +68,6 @@
 /* 6500W version */
 //#define CAL_POWER	6500
 //#define CAL_VOLTAGE	1060l
+/* 12000W version */
+//#define CAL_POWER	(12000 / 10)
+//#define CAL_VOLTAGE	(1020l / 10)
