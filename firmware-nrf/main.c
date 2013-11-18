@@ -124,7 +124,7 @@ int main(void)
 	/* WDT as periodic interrupt */
 	WDTCSR |= (1 << WDE) | (1 << WDCE);
 	WDTCSR = (0 << WDCE) | (1 << WDIF) | (1 << WDIE) |
-		 (1 << WDP2) | (0 << WDP1) | (1 << WDP0);
+		 (1 << WDP2) | (1 << WDP1) | (0 << WDP0);
 
 	/* INT0 init - low level */
 	GIMSK |= (1 << INT0);
